@@ -1,3 +1,3 @@
 export function TokonomicsSection() {
-  return <div>hero-section</div>;
+  return <div>tokenomics-section</div>;
 }

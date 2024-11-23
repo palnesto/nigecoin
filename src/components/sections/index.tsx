@@ -1,4 +1,4 @@
-export * from "./hero";
+export * from "./home";
 export * from "./about";
 export * from "./footer";
-export * from "./tokonomics";
+export * from "./tokenomics";

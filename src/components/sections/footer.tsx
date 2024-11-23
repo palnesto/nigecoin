@@ -1,3 +1,3 @@
 export function FooterSection() {
-  return <div>hero-section</div>;
+  return <div id="">footer</div>;
 }

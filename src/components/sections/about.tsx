@@ -1,3 +1,4 @@
 export function AboutSection() {
-  return <div>hero-section</div>;
+  return <div id="aboutus">about-section</div>;
 }
+
