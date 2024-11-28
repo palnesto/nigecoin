@@ -22,9 +22,9 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#030E2D] text-white p-4 flex justify-between items-center w-full">
-      <div className="flex items-center space-x-2">
-        <img src="/src/assets/logo.png" alt="logo" className="w-7 h-7" />
+    <nav className="bg-[#030E2D] text-white p-4 flex justify-between items-center w-full position-fixed z-50 top-0 left-0 md:px-16 md:py-4">
+      <div className="flex items-center">
+        <span className="w-9 h-9 bg-logo bg-contain bg-no-repeat" aria-label="logo"></span>
         <span className="text-xl font-bold">NigeCoin</span>
       </div>
       <button

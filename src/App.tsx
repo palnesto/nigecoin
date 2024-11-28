@@ -5,7 +5,7 @@ import {
   AboutSection,
   FooterSection,
   HeroSection,
-  TokonomicsSection,
+  TokenomicsSection,
 } from "./components/sections";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <MaxWidthContainer>
         <HeroSection />
         <AboutSection />
-        <TokonomicsSection />
+        <TokenomicsSection />
         <FooterSection />
       </MaxWidthContainer>
     </div>
