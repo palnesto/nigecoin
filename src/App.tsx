@@ -14,10 +14,12 @@ function App() {
       <Navbar />
       {/* main content */}
       <MaxWidthContainer>
-        <HeroSection />
-        <AboutSection />
-        <TokenomicsSection />
-        <FooterSection />
+        <div className="mt-20 xl:mt-5">
+          <HeroSection />
+          <AboutSection />
+          <TokenomicsSection />
+          <FooterSection />
+        </div>
       </MaxWidthContainer>
     </div>
   );
