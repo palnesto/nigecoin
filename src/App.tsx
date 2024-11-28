@@ -1,6 +1,6 @@
 import "./App.css";
 import { MaxWidthContainer } from "./components/max-width-container";
-import { Navbar} from './components/navbar'
+import { Navbar } from "./components/navbar";
 import {
   AboutSection,
   FooterSection,
@@ -10,7 +10,7 @@ import {
 
 function App() {
   return (
-    <div className="bg-blue-900 flex items-center flex-col w-full">
+    <div className="bg-blue-900 flex items-center flex-col w-full relative">
       <Navbar />
       {/* main content */}
       <MaxWidthContainer>

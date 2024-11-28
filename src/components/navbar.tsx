@@ -1,5 +1,13 @@
-import   { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
+const config = [
+  { name: "Home", href: "#home" },
+  { name: "About us", href: "#aboutus" },
+  { name: "Tokenomics", href: "#tokenomics" },
+  { name: "Roadmap", href: "#roadmap" },
+  { name: "Contact us", href: "#contactus" },
+  { name: "White paper", href: "#whitepaper" },
+];
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -21,51 +29,30 @@ export const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    console.log("isOpen", isOpen);
+  }, [isOpen]);
   return (
-    <nav className="bg-[#030E2D] text-white p-4 flex justify-between items-center w-full position-fixed z-50 top-0 left-0 md:px-16 md:py-4">
-      <div className="flex items-center">
-        <span className="w-9 h-9 bg-logo bg-contain bg-no-repeat" aria-label="logo"></span>
-        <span className="text-xl font-bold">NigeCoin</span>
-      </div>
-      <button
-        className="block md:hidden focus:outline-none"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
+    <nav className="bg-[#030E2D] text-white px-4 py-6 flex justify-between items-center w-full position-fixed z-50 top-0 left-0 xl:px-16 xl:py-7 fixed top-0">
+      <div className="flex items-center gap-2">
+        <div className="aspect-square h-12 xl:h-[75px]">
+          <img
+            src="/public/logo.png"
+            alt="logo"
+            className="w-full h-full object-contain"
           />
-        </svg>
-      </button>
-      <ul
-        className={`${
-          isOpen ? "block" : "hidden"
-        } absolute top-16 left-0 w-full bg-gray-800 p-4 md:relative md:flex md:space-x-6 md:p-0 md:bg-transparent md:top-0 md:left-auto md:w-auto`}
-      >
-        {[
-          { name: "Home", href: "#home" },
-          { name: "About us", href: "#aboutus" },
-          { name: "Tokenomics", href: "#tokenomics" },
-          { name: "Roadmap", href: "#roadmap" },
-          { name: "Contact us", href: "#contactus" },
-          { name: "White paper", href: "#whitepaper" },
-        ].map((item) => (
+        </div>
+        <span className="text-2xl xl:text-4xl font-bold">NigeCoin</span>
+      </div>
+      <ul className="hidden xl:flex xl:space-x-6 xl:p-0">
+        {config.map((item) => (
           <li key={item.name}>
             <a
               href={item.href}
-              className={`block py-2 md:py-0 ${
+              className={`block py-3 xl:py-0 xl:tracking-wider xl:text-md 2xl:text-lg ${
                 activeSection === item.href.replace("#", "")
-                  ? "border-b-4 border-[#13BE5A]"
-                  : "border-b-4 border-transparent"
+                  ? "border-b-2 xl:border-b-4 border-[#13BE5A] font-bold text-white"
+                  : "border-b-2 border-transparent font-extralight text-white/80"
               }`}
             >
               {item.name}
@@ -73,8 +60,56 @@ export const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div className="hidden md:block">
-        <button className="bg-[#13BE5A] px-3 py-2 rounded-3xl font-bold font-2px">
+
+      <div className="flex gap-4 items-center xl:hidden">
+        <button className="bg-green sm:hover:bg-green/90 transition-all duration-150 px-3 py-1 rounded-3xl font-bold text-xs  animate-pulse sm:hover:animate-none">
+          Join Pre-Sale
+        </button>
+        <button
+          className="block focus:outline-none"
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } absolute xl:hidden top-20 left-0 w-full bg-blue p-4 xl:relative  xl:bg-transparent xl:top-0 xl:left-auto xl:w-auto`}
+      >
+        <ul className="xl:flex xl:space-x-6 xl:p-0">
+          {config.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className={`block py-3 xl:py-0 xl:tracking-wider ${
+                  activeSection === item.href.replace("#", "")
+                    ? "border-b-2 xl:border-b-4 border-green font-bold text-white"
+                    : "border-b-2 border-transparent font-extralight text-white/80"
+                }`}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="hidden xl:block">
+        <button className="bg-green px-8 py-3 rounded-full font-bold text-lg hover:bg-green/90 transition-all duration-150">
           Join our Pre-sale
         </button>
       </div>
