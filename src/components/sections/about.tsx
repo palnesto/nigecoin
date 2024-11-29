@@ -243,8 +243,9 @@ export function AboutSection() {
         <div className="absolute bottom-7 w-full h-10 md:hidden">
           <div className="h-full w-full relative bg-blue-500">
             {/* bar 1 */}
-            <div className="absolute bottom-0 border border-white ml-[16vw] w-[72vw] h-[80vw] sm:h-[50vw] sm:ml-[11vw] sm:w-[48vw] group">
+            <div className="absolute bottom-0 ml-[16vw] w-[72vw] h-[80vw] sm:h-[50vw] sm:ml-[11vw] sm:w-[48vw] group">
               <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                <Gradient />
                 {/* title + button */}
                 <div className="absolute w-[80%] bottom-[26vw] sm:bottom-[18vw] ml-[9%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
                   <h2 className="font-bold text-[4vw] sm:text-[3vw]">
@@ -256,18 +257,19 @@ export function AboutSection() {
                   </div>
                 </div>
                 {/* eagle image */}
-                <div className="w-[40%] absolute bottom-[24vw] sm:bottom-[16vw] right-[-5%]">
+                <div className="w-[40%] absolute bottom-[24vw] sm:bottom-[16vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <img
                     src="/public/character.png"
                     alt="eagle"
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-contain opa"
                   />
                 </div>
               </div>
             </div>
             {/* bar 2 */}
-            <div className="absolute bottom-0 border border-white ml-[92vw] w-[67vw] h-[100vw] sm:h-[60vw] sm:ml-[61vw] sm:w-[45vw] group">
+            <div className="absolute bottom-0 ml-[92vw] w-[67vw] h-[100vw] sm:h-[60vw] sm:ml-[61vw] sm:w-[45vw] group">
               <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                <Gradient />
                 {/* title + button */}
                 <div className="absolute w-[80%] bottom-[45vw] sm:bottom-[29vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
                   <h2 className="font-bold text-[4vw] sm:text-[3vw]">
@@ -280,7 +282,7 @@ export function AboutSection() {
                   </div>
                 </div>
                 {/* eagle image */}
-                <div className="w-[40%] absolute bottom-[38vw] sm:bottom-[25vw] right-[-5%]">
+                <div className="w-[40%] absolute bottom-[38vw] sm:bottom-[25vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <img
                     src="/public/character.png"
                     alt="eagle"
@@ -290,8 +292,9 @@ export function AboutSection() {
               </div>
             </div>
             {/* bar 3 */}
-            <div className="absolute bottom-0 border border-white ml-[163vw] w-[67vw] h-[120vw] sm:h-[80vw] sm:ml-[108vw] sm:w-[45vw] group">
+            <div className="absolute bottom-0 ml-[163vw] w-[67vw] h-[120vw] sm:h-[80vw] sm:ml-[108vw] sm:w-[45vw] group">
               <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                <Gradient />
                 {/* title + button */}
                 <div className="absolute w-[80%] bottom-[63vw] sm:bottom-[40vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
                   <h2 className="font-bold text-[4vw] sm:text-[3vw]">
@@ -304,7 +307,7 @@ export function AboutSection() {
                   </div>
                 </div>
                 {/* eagle image */}
-                <div className="w-[40%] absolute bottom-[55vw] sm:bottom-[38vw] right-[-5%]">
+                <div className="w-[40%] absolute bottom-[55vw] sm:bottom-[38vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <img
                     src="/public/character.png"
                     alt="eagle"
@@ -314,8 +317,9 @@ export function AboutSection() {
               </div>
             </div>
             {/* bar 4 */}
-            <div className="absolute bottom-0 border border-white ml-[231vw] w-[68vw] h-[140vw] sm:h-[100vw] sm:ml-[154vw] sm:w-[46vw] group">
+            <div className="absolute bottom-0 ml-[231vw] w-[68vw] h-[140vw] sm:h-[100vw] sm:ml-[154vw] sm:w-[46vw] group">
               <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-500 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%] top-[-10%]" />
                 {/* title + button */}
                 <div className="absolute w-[80%] bottom-[93vw] sm:bottom-[62vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
                   <h2 className="font-bold text-[4vw] sm:text-[3vw]">
@@ -328,7 +332,7 @@ export function AboutSection() {
                   </div>
                 </div>
                 {/* eagle image */}
-                <div className="w-[40%] absolute bottom-[90vw] sm:bottom-[60vw] right-[-5%]">
+                <div className="w-[40%] absolute bottom-[90vw] sm:bottom-[60vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <img
                     src="/public/character.png"
                     alt="eagle"
@@ -399,3 +403,7 @@ export function AboutSection() {
     </>
   );
 }
+
+const Gradient = () => (
+  <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-500 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%]" />
+);
