@@ -14,19 +14,19 @@ export function TokenomicsSection() {
   ];
 
   return (
-    <div className="flex flex-col sm:flex-row   justify-between bg-[#f7f6e1] min-h-screen pt-2">
+    <div className="flex flex-col 2xl:flex-row lg:flex-row lg: justify-between bg-[#f7f6e1] ">
       
-      <div className="w-full sm:w-[45%] flex flex-col items-start justify-end   sm:mb-0">
-        <h2 className="text-4xl font-extrabold benz-grotesk ml-14 mb-4">Tokenomics of Nige</h2>
+      <div className=" lg:w-1/2 flex flex-col justify-center pt-6">
+        <h2 className="text-4xl font-extrabold benz-grotesk text-center">Tokenomics of Nige</h2>
         <img
           src="/public/people.png"
           alt="People"
-          className="w-full mb-0 sm:w-full max-w-lg mx-auto"
+          className="w-full   max-w-lg mx-auto"
         />
       </div>
  
-      <div className="w-full sm:w-[55%] flex justify-center items-center">
-        <PieChart width={600} height={400} className=" sm:w-[100%] sm:h-[100%]">
+      <div className=" lg:w-1/2 flex justify-center  ">
+        <PieChart width={600} height={500}  >
           <Pie
             data={data}
             dataKey="value"
