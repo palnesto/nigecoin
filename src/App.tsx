@@ -10,7 +10,7 @@ import {
 
 function App() {
   return (
-    <div className="bg-blue-900 flex items-center flex-col w-full relative">
+    <div className="bg-blue-900 flex items-center flex-col w-full relative bg-blue">
       <Navbar />
       {/* main content */}
       <MaxWidthContainer>

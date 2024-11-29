@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BiChevronDown } from "react-icons/bi";
 import { FaChevronUp } from "react-icons/fa";
 
 interface Phase {
@@ -134,7 +135,7 @@ export function AboutSection() {
           </p>
         </div>
       </div> */}
-      <div className="bg-blue py-40">
+      <div className="bg-blue md:py-40">
         <div className="relative bg-green grid grid-cols-5 w-full py-14 px-20">
           <div className=" col-span-3 w-full relative">
             <div className="absolute aspect-square h-[50rem] z-50 -top-60 ">
@@ -163,7 +164,184 @@ export function AboutSection() {
         </div>
       </div>
 
-      <div className="relative bg-blue overflow-x-auto">
+      {/* <div className="bg-blue relative">
+        <div className="w-full">
+          <img
+            src="/public/graph.png"
+            alt="Bar Graph"
+            className="h-full w-full object-contain"
+          />
+        </div>
+        <div className="absolute inset-0 bg-transparent z-10 flex items-end pb-[1.8vw]">
+          <div className="relative h-20 w-full">
+            <div className=" border-2 border-white w-[24vw] max-container:w-[475.2px] ml-[5.4vw] max-container:ml-[106.92px] h-[26vw] max-container:h-[514.8px] absolute bottom-0">
+              <div className="h-full w-full bg-transparent relative">
+                <div className="absolute w-[50%] bg-transparent bottom-[35%] ml-[12%] flex flex-col gap-[1vw]">
+                  <h2 className="text-white font-bold text-[1.3vw]">
+                    Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
+                  </h2>
+                  <div className="border-white border rounded-full uppercase text-white text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2">
+                    show more
+                    <BiChevronDown />
+                  </div>
+                </div>
+                <div className="w-[40%] absolute bottom-[32%] right-[-5%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className=" border-2 border-white w-[22vw] max-container:w-[435.6px] ml-[30.5vw] max-container:ml-[603.9px] h-[30vw] max-container:h-[594px] absolute bottom-0">
+              <div className="h-full w-full bg-transparent relative">
+                <div className="w-[40%] absolute bottom-[45%] right-[-5%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className=" border-2 border-white w-[22vw] max-container:w-[435.6px] ml-[54vw] max-container:ml-[1069.2px] h-[35vw] max-container:h-[693px] absolute bottom-0">
+              <div className="h-full w-full bg-transparent relative">
+                <div className="w-[40%] absolute bottom-[57%] right-[-5%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className=" border-2 border-white w-[23vw] max-container:w-[455.4px] ml-[77vw] max-container:ml-[1524.6px] h-[40vw] max-container:h-[792px] absolute bottom-0">
+              <div className="h-full w-full bg-transparent relative">
+                <div className="w-[40%] absolute bottom-[76%] right-[0%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="bg-blue relative overflow-x-auto mb-24 pt-40">
+        <div className="w-[300vw] sm:w-[200vw] md:w-full">
+          <img
+            src="/public/graph.png"
+            alt=""
+            className="w-full border border-white"
+          />
+        </div>
+        {/* till start of md only */}
+        <div className="absolute bottom-7 w-full h-10 md:hidden">
+          <div className="h-full w-full relative bg-blue-500">
+            {/* bar 1 */}
+            <div className="absolute bottom-0 border border-white ml-[16vw] w-[72vw] h-[80vw] sm:h-[50vw] sm:ml-[11vw] sm:w-[48vw] group">
+              <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                {/* title + button */}
+                <div className="absolute w-[80%] bottom-[26vw] sm:bottom-[18vw] ml-[9%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+                  <h2 className="font-bold text-[4vw] sm:text-[3vw]">
+                    Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
+                  </h2>
+                  <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                    show more
+                    <BiChevronDown />
+                  </div>
+                </div>
+                {/* eagle image */}
+                <div className="w-[40%] absolute bottom-[24vw] sm:bottom-[16vw] right-[-5%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* bar 2 */}
+            <div className="absolute bottom-0 border border-white ml-[92vw] w-[67vw] h-[100vw] sm:h-[60vw] sm:ml-[61vw] sm:w-[45vw] group">
+              <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                {/* title + button */}
+                <div className="absolute w-[80%] bottom-[45vw] sm:bottom-[29vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+                  <h2 className="font-bold text-[4vw] sm:text-[3vw]">
+                    Phase - 2 <br /> Growth & Expansion <br /> (Q4 2024 - Q1
+                    2025)
+                  </h2>
+                  <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                    show more
+                    <BiChevronDown />
+                  </div>
+                </div>
+                {/* eagle image */}
+                <div className="w-[40%] absolute bottom-[38vw] sm:bottom-[25vw] right-[-5%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* bar 3 */}
+            <div className="absolute bottom-0 border border-white ml-[163vw] w-[67vw] h-[120vw] sm:h-[80vw] sm:ml-[108vw] sm:w-[45vw] group">
+              <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                {/* title + button */}
+                <div className="absolute w-[80%] bottom-[63vw] sm:bottom-[40vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+                  <h2 className="font-bold text-[4vw] sm:text-[3vw]">
+                    Phase - 3 <br /> Platform Launch & <br /> Ecosystem
+                    Integration <br /> (Q2 2025 - Q4 2025)
+                  </h2>
+                  <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                    show more
+                    <BiChevronDown />
+                  </div>
+                </div>
+                {/* eagle image */}
+                <div className="w-[40%] absolute bottom-[55vw] sm:bottom-[38vw] right-[-5%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* bar 4 */}
+            <div className="absolute bottom-0 border border-white ml-[231vw] w-[68vw] h-[140vw] sm:h-[100vw] sm:ml-[154vw] sm:w-[46vw] group">
+              <div className="relative h-full w-full sm:group-hover:cursor-pointer">
+                {/* title + button */}
+                <div className="absolute w-[80%] bottom-[93vw] sm:bottom-[62vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+                  <h2 className="font-bold text-[4vw] sm:text-[3vw]">
+                    Phase - 4 <br /> Long-Term Vision & <br /> Sustainability{" "}
+                    <br /> (2026 & Beyond)
+                  </h2>
+                  <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                    show more
+                    <BiChevronDown />
+                  </div>
+                </div>
+                {/* eagle image */}
+                <div className="w-[40%] absolute bottom-[90vw] sm:bottom-[60vw] right-[-5%]">
+                  <img
+                    src="/public/character.png"
+                    alt="eagle"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="relative bg-blue overflow-x-auto">
         <div className="min-w-[768px] w-full">
           <h2 className="text-white text-7xl benz-grotesk relative left-32 top-44 md:text-3xl md:top-10 md:w-56 xl:text-6xl xl:top-60 xl:w-[450px]">
             Making a Vision Reality
@@ -217,7 +395,7 @@ export function AboutSection() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
