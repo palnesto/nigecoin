@@ -146,7 +146,7 @@ export function AboutSection() {
               />
             </div>
           </div>
-          <div className=" flex flex-col  justify-center col-span-2 w-full">
+          <div className=" flex flex-col justify-center col-span-2 w-full">
             <h2 className="text-[47px] leading-none word-spacing pb-3 text-white benz-grotesk">
               GIVING POWER <br /> BACK TO PEOPLE
             </h2>
@@ -164,7 +164,7 @@ export function AboutSection() {
         </div>
       </div>
 
-      <div className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20 border border-white">
+      <div className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20">
         <div className="w-[300vw] sm:w-[200vw] md:w-full">
           <img src="/public/graph.png" alt="" className="w-full" />
         </div>
