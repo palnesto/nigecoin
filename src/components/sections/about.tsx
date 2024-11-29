@@ -135,7 +135,7 @@ export function AboutSection() {
           </p>
         </div>
       </div> */}
-      <div className="bg-blue">
+      <div className="bg-blue py-28">
         <div className="relative bg-green grid grid-cols-5 w-full py-14 px-20">
           <div className=" col-span-3 w-full relative">
             <div className="absolute aspect-square h-[50rem] z-50 -top-60 ">
@@ -164,76 +164,12 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* <div className="bg-blue relative">
-        <div className="w-full">
-          <img
-            src="/public/graph.png"
-            alt="Bar Graph"
-            className="h-full w-full object-contain"
-          />
-        </div>
-        <div className="absolute inset-0 bg-transparent z-10 flex items-end pb-[1.8vw]">
-          <div className="relative h-20 w-full">
-            <div className=" border-2 border-white w-[24vw] max-container:w-[475.2px] ml-[5.4vw] max-container:ml-[106.92px] h-[26vw] max-container:h-[514.8px] absolute bottom-0">
-              <div className="h-full w-full bg-transparent relative">
-                <div className="absolute w-[50%] bg-transparent bottom-[35%] ml-[12%] flex flex-col gap-[1vw]">
-                  <h2 className="text-white font-bold text-[1.3vw]">
-                    Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
-                  </h2>
-                  <div className="border-white border rounded-full uppercase text-white text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2">
-                    show more
-                    <BiChevronDown />
-                  </div>
-                </div>
-                <div className="w-[40%] absolute bottom-[32%] right-[-5%]">
-                  <img
-                    src="/public/character.png"
-                    alt="eagle"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className=" border-2 border-white w-[22vw] max-container:w-[435.6px] ml-[30.5vw] max-container:ml-[603.9px] h-[30vw] max-container:h-[594px] absolute bottom-0">
-              <div className="h-full w-full bg-transparent relative">
-                <div className="w-[40%] absolute bottom-[45%] right-[-5%]">
-                  <img
-                    src="/public/character.png"
-                    alt="eagle"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className=" border-2 border-white w-[22vw] max-container:w-[435.6px] ml-[54vw] max-container:ml-[1069.2px] h-[35vw] max-container:h-[693px] absolute bottom-0">
-              <div className="h-full w-full bg-transparent relative">
-                <div className="w-[40%] absolute bottom-[57%] right-[-5%]">
-                  <img
-                    src="/public/character.png"
-                    alt="eagle"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className=" border-2 border-white w-[23vw] max-container:w-[455.4px] ml-[77vw] max-container:ml-[1524.6px] h-[40vw] max-container:h-[792px] absolute bottom-0">
-              <div className="h-full w-full bg-transparent relative">
-                <div className="w-[40%] absolute bottom-[76%] right-[0%]">
-                  <img
-                    src="/public/character.png"
-                    alt="eagle"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      <div className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20">
+      <div className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20 border border-white">
         <div className="w-[300vw] sm:w-[200vw] md:w-full">
           <img src="/public/graph.png" alt="" className="w-full" />
+        </div>
+        <div className="benz-grotesk text-white text-[49px] xs:text-[55px]sm:text-[63.8px] md:text-[4vw] md:top-[4vw] max-container:text-[79.2px] max-container:left-[100px] absolute top-[15vw] sm:top-[10vw] left-[11vw] sm:left-[7vw]">
+          Making a <br /> Vision Reality
         </div>
         {/* till start of md only */}
         <div className="absolute bottom-7 w-full h-10 md:hidden">
@@ -348,7 +284,7 @@ export function AboutSection() {
               <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
                 <Gradient />
                 <div className="absolute w-[60%] bg-transparent bottom-[35%] ml-[5%] flex flex-col gap-[1vw]  text-white/70 group-hover:text-white">
-                  <h2 className="font-bold text-[1.3vw]">
+                  <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                     Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
                   </h2>
                   <div className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
@@ -370,7 +306,7 @@ export function AboutSection() {
               <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
                 <Gradient />
                 <div className="absolute w-[60%] bg-transparent bottom-[47%] ml-[5%] flex flex-col gap-[1vw] text-white/70 group-hover:text-white">
-                  <h2 className="font-bold text-[1.3vw]">
+                  <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                     Phase - 2 <br /> Growth & Expansion <br /> (Q4 2024 - Q1
                     2025)
                   </h2>
@@ -393,7 +329,7 @@ export function AboutSection() {
               <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
                 <Gradient />
                 <div className="absolute w-[60%] bg-transparent bottom-[58%] ml-[5%] flex flex-col gap-[1vw] text-white/70 group-hover:text-white">
-                  <h2 className="font-bold text-[1.3vw]">
+                  <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                     Phase - 3 <br /> Platform Launch <br />& Ecosystem
                     Integration <br /> (Q2 2025 -Q4 2025)
                   </h2>
@@ -416,7 +352,7 @@ export function AboutSection() {
               <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
                 <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-300 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%] top-[-25%]" />
                 <div className="absolute w-[60%] bg-transparent bottom-[78%] ml-[5%] flex flex-col gap-[1vw] text-white/70 group-hover:text-white">
-                  <h2 className="font-bold text-[1.3vw]">
+                  <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                     Phase - 4 <br /> Long-Term Vision & <br /> Sustainability{" "}
                     <br />
                     (2026 & Beyond)
@@ -438,62 +374,6 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-
-      {/* <div className="relative bg-blue overflow-x-auto">
-        <div className="min-w-[768px] w-full">
-          <h2 className="text-white text-7xl benz-grotesk relative left-32 top-44 md:text-3xl md:top-10 md:w-56 xl:text-6xl xl:top-60 xl:w-[450px]">
-            Making a Vision Reality
-          </h2>
-          <section className="w-full">
-            <img src="/public/graph.png" alt="Bar Graph"  />
-          </section>
-
-          {phases.map((phase) => (
-            <div
-              key={phase.id}
-              className="absolute w-40 inter lg:w-[190px]"
-              style={{
-                left: phase.position.left,
-                bottom: phase.position.bottom,
-              }}
-            >
-              <section>
-                <p className="text-white font-bold">{phase.title}</p>
-                <p className="text-white font-bold">{phase.subtitle}</p>
-                <button
-                  onClick={() => togglePhase(phase.id)}
-                  className="flex items-center justify-center   py-1.5 px-2 rounded-full border-2 border-white text-white font-semibold transition duration-300"
-                >
-                  <span>SHOW MORE</span>
-                  <FaChevronUp
-                    className={`ml-2 transition-transform duration-300 ${
-                      openPhaseId === phase.id ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-              </section>
-              {openPhaseId === phase.id && (
-                <div className="fixed inset-0 bg-opacity-100 flex justify-center items-center z-50">
-                  <div className="bg-gray rounded-lg p-6 text-white relative w-11/12 max-w-lg inter">
-                    <button
-                      onClick={() => togglePhase(phase.id)}
-                      className="absolute top-4 right-4 text-white hover:text-red-500"
-                    >
-                      Close
-                    </button>
-                    <h3 className="text-lg font-bold">
-                      {phase.title} {phase.subtitle}
-                    </h3>
-                    <p className="text-white mt-4 whitespace-pre-line">
-                      {phase.content}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div> */}
     </>
   );
 }
