@@ -29,7 +29,7 @@ export const FooterSection = () => {
   />
 
   <div className="text-center   items-center">
-    <h2 className="text-4xl font-bold pb-14">Team Onboard</h2>
+    <h2 className="text-4xl font-bold pb-14 benz-grotesk">Team Onboard</h2>
     <div className="flex flex-wrap justify-center gap-8 mb-8">
       {teamMembers.slice(0, 4).map((member, index) => (
         <div key={index} className="relative flex flex-col items-center"> 
@@ -60,7 +60,7 @@ export const FooterSection = () => {
 
     <button
       onClick={() => setIsModalOpen(true)}
-      className="bg-[#13BE5A] text-black px-6 py-3 rounded-full font-bold"
+      className="bg-[#13BE5A] text-black px-6 py-3 rounded-full font-bold inter"
     >
       View Team
     </button>
@@ -102,14 +102,14 @@ export const FooterSection = () => {
         </div>
       )}
  
-      <section id="contactus" className=" bg-green flex flex-row justify-between ">
-        <img className="w-1/2 " src="/public/footerImage.png" alt="" />
-        <div className="text-white justify-items-end align-middle">
-          <h2 className="text-3xl font-extrabold  mb-1 font-heading-font">CONTACT US</h2>
-          <p className="text-xl font-inter">FOR ANY QUERIES, WRITE AN EMAIL TO</p>
+      <section id="contactus" className=" bg-green flex flex-col-reverse gap-20 items-center md:flex-row justify-between px-4 max-h-fit">
+        <img className="w-full md:w-1/2 -mt-16 xl:-mt-[6rem] 2xl:-mt-[8rem]" src="/public/footerImage.png" alt="" />
+        <div className="text-white justify-items-center align-middle  w-full md:w-1/2  md:align-middle md:justify-items-end">
+          <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10">CONTACT US</h2>
+          <p className="inter-s">FOR ANY QUERIES, WRITE AN EMAIL TO</p>
           <a
             href="mailto:info@nigecoin.xyz"
-            className="text-blue-900 underline text-sm mb-8"
+            className="text-blue-900 underline text-sm mb-8 inter-s"
           >
             info@nigecoin.xyz
           </a>
@@ -119,7 +119,7 @@ export const FooterSection = () => {
             <FaYoutube className="text-3xl" />
             <FaTelegram className="text-3xl" />
           </section>
-          <section className="pt-6 font-bold">
+          <section className="pt-6 font-bold ">
             <ul className="flex space-x-6 text-sm mb-4">
               <li>
                 <a href="#tokenomics" className="hover:text-blue-900">
@@ -138,11 +138,11 @@ export const FooterSection = () => {
               </li>
               <li>
                 <a href="#aboutus" className="hover:text-blue-900">
-                  ABOUT NIGE COIN
+                  ABOUT 
                 </a>
               </li>
             </ul>
-            <p className="text-sm text-right">&copy; 2024 BY NIGECOIN. All RIGHTS RESERVED!</p>
+            <p className="text-sm text-right ">&copy; 2024 BY NIGECOIN. All RIGHTS RESERVED!</p>
             <p className="text-sm text-right">PRIVACY POLICY</p>
           </section>
         </div>

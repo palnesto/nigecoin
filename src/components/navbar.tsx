@@ -33,7 +33,7 @@ export const Navbar = () => {
     console.log("isOpen", isOpen);
   }, [isOpen]);
   return (
-    <nav className="bg-[#030E2D] text-white px-4 py-6 flex justify-between items-center w-full position-fixed z-50 top-0 left-0 xl:px-16 xl:py-7 fixed top-0">
+    <nav className="z-[999] bg-[#030E2D] text-white px-4 py-6 flex justify-between items-center w-full position-fixed z-50 left-0 xl:px-16 xl:py-7 fixed top-0">
       <div className="flex items-center gap-2">
         <div className="aspect-square h-12 xl:h-[75px]">
           <img
@@ -44,7 +44,7 @@ export const Navbar = () => {
         </div>
         <span className="text-2xl xl:text-4xl font-bold">NigeCoin</span>
       </div>
-      <ul className="hidden xl:flex xl:space-x-6 xl:p-0">
+      <ul className="hidden xl:flex xl:space-x-6 xl:p-0 poppins">
         {config.map((item) => (
           <li key={item.name}>
             <a
@@ -62,7 +62,7 @@ export const Navbar = () => {
       </ul>
 
       <div className="flex gap-4 items-center xl:hidden">
-        <button className="bg-green sm:hover:bg-green/90 transition-all duration-150 px-3 py-1 rounded-3xl font-bold text-xs  animate-pulse sm:hover:animate-none">
+        <button className="bg-green sm:hover:bg-green/90 transition-all duration-150 px-3 py-1 rounded-3xl font-bold inter text-xs  animate-pulse sm:hover:animate-none">
           Join Pre-Sale
         </button>
         <button
@@ -109,7 +109,7 @@ export const Navbar = () => {
         </ul>
       </div>
       <div className="hidden xl:block">
-        <button className="bg-green px-8 py-3 rounded-full font-bold text-lg hover:bg-green/90 transition-all duration-150">
+        <button className="bg-green px-8 py-3 rounded-full font-bold inter text-lg hover:bg-green/90 transition-all duration-150">
           Join our Pre-sale
         </button>
       </div>

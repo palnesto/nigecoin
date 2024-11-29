@@ -17,7 +17,7 @@ export function TokenomicsSection() {
     <div className="flex flex-col sm:flex-row   justify-between bg-[#f7f6e1] min-h-screen pt-2">
       
       <div className="w-full sm:w-[45%] flex flex-col items-start justify-end   sm:mb-0">
-        <h2 className="text-4xl font-extrabold font-heading-font ml-14 mb-4">Tokenomics of Nige</h2>
+        <h2 className="text-4xl font-extrabold benz-grotesk ml-14 mb-4">Tokenomics of Nige</h2>
         <img
           src="/public/people.png"
           alt="People"

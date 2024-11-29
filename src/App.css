@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Benz Grotesk";
+  src: url("/public/fonts/darker/Benz Grotesk.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.benz-grotesk {
+  font-family: "Benz Grotesk", sans-serif;
+  font-weight: 850;
+  font-style: normal;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.inter-s {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.word-spacing{
+  word-spacing: 0.7rem;
+}
