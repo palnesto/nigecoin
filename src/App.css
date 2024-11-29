@@ -44,3 +44,7 @@
   width: 100%;
   filter: blur(50px);
 }
+
+.scrollbar-x::-webkit-scrollbar {
+  display: none;
+}
