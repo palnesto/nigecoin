@@ -30,11 +30,18 @@ export default {
       },
       animation: {
         spin360: "spin360 3s linear infinite",
+        moveInfinite: "moveLeftToRight 5s ease-in-out infinite",
       },
       keyframes: {
         spin360: {
           "0%": { transform: "rotateY(0deg)" },
           "100%": { transform: "rotateY(360deg)" },
+        },
+        moveLeftToRight: {
+          "0%": { left: "-360px", opacity: 0.2 },
+          "97%": { left: "150vw" },
+          "99%": { left: "150vw", opacity: 0 },
+          "100%": { left: "-360px", opacity: 0 },
         },
       },
     },
