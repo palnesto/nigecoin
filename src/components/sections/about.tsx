@@ -167,7 +167,7 @@ export function AboutSection() {
         {/* Green Background */}
         <div className="absolute transform -translate-x-1/2 left-1/2 -translate-y-1/2 top-[48%] w-screen h-[48rem] md:h-[60rem] lg:h-[21rem] xl:h-[24rem] 2xl:h-[30rem] bg-green z-0 overflow-hidden">
           <div className="relative h-full w-full">
-            <div className="ease-[cubic-bezier(0.19,1,0.22,1)] absolute left-[-360px] -top-[100px] z-10 w-44 h-[1500px] rotate-[-20deg] bg-white opacity-20 transition-all duration-500 animate-moveInfinite lala"></div>
+            <div className="ease-[cubic-bezier(0.19,1,0.22,1)] absolute left-[-360px] -top-[100px] z-10 w-44 h-[1500px] rotate-[-20deg] bg-white opacity-20 transition-all duration-500 animate-moveInfiniteSm md:animate-moveInfiniteMd lala"></div>
           </div>
         </div>
         {/* Content Section */}

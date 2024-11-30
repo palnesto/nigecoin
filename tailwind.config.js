@@ -30,7 +30,8 @@ export default {
       },
       animation: {
         spin360: "spin360 3s linear infinite",
-        moveInfinite: "moveLeftToRight 5s ease-in-out infinite",
+        moveInfiniteSm: "moveLeftToRight 3s ease-in-out infinite",
+        moveInfiniteMd: "moveLeftToRight 5s ease-in-out infinite",
       },
       keyframes: {
         spin360: {
