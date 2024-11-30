@@ -76,19 +76,19 @@ export const FooterSection = () => {
       </section>
  
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-100 flex items-center justify-center z-50">
-          <div className="bg-[#030E2D] text-white rounded-lg relative overflow-hidden p-10 mt- ">
+        <div className="fixed inset-0 bg-black bg-opacity-100 flex items-center justify-center z-50 ">
+          <div className="bg-[#030E2D] text-white rounded-lg relative overflow-hidden mt-52 pb-28 lg:mt-60 ">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-white hover:text-red-500"
+              className="absolute top-9 right-4 text-white hover:text-red-500"
             >
               X
             </button>
-            <h1 className="text-4xl font-bold mb-8 text-center">Team Onboard</h1>                                                                                                                     
+            <h1 className="lg:text-4xl font-bold mb-6 text-center text-lg pt-14">Team Onboard</h1>                                                                                                                     
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-h-[80vh] overflow-y-auto">
               {teamMembers.map((member, index) => (
                 <div key={index} className="text-center">
-                  <img
+                  <img pb-28
                     src={member.image}
                     alt={member.name}
                     className="w-36 h-36 mx-auto rounded-full mb-4"

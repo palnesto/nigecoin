@@ -1,70 +1,69 @@
-import { useState } from "react";
-import { FaChevronUp } from "react-icons/fa";
+// import { useState } from "react"; 
 import { MakingVision } from "./making-vision";
 
-interface Phase {
-  id: number;
-  title: string;
-  subtitle: string;
-  content: string;
-  position: { left: string; bottom: string };
-}
+// interface Phase {
+//   id: number;
+//   title: string;
+//   subtitle: string;
+//   content: string;
+//   position: { left: string; bottom: string };
+// }
 
 export function AboutSection() {
-  const [openPhaseId, setOpenPhaseId] = useState<number | null>(null);
+  // const [openPhaseId, setOpenPhaseId] = useState<number | null>(null);
 
-  const phases: Phase[] = [
-    {
-      id: 1,
-      title: "Phase - 1",
-      subtitle: "Foundation & Launch (Q3 2024)",
-      content: `
-        - Launch Nige on Solana with a smart contract audit.
-        - Start an initial marketing campaign and establish social media presence.
-        - Conduct AMAs for community engagement.
-        - Execute initial token sale and influencer partnerships.
-        - Develop and launch raffle systems.
-      `,
-      position: { left: "10%", bottom: "25%" },
-    },
-    {
-      id: 2,
-      title: "Phase - 2",
-      subtitle: "Growth & Expansion (Q4 2024 - Q1 2025)",
-      content: `
-        - Expand Nige's reach through partnerships with businesses and governments.
-        - Scale the platform to handle a growing user base.
-        - Launch new features based on user feedback.
-      `,
-      position: { left: "33%", bottom: "35%" },
-    },
-    {
-      id: 3,
-      title: "Phase - 3",
-      subtitle: "Platform Launch & Ecosystem Integration (Q2 2025 - Q4 2025)",
-      content: `
-        - Launch the full ecosystem with integrated tools.
-        - Collaborate with global partners for job placements.
-        - Foster a thriving blockchain ecosystem with continuous updates.
-      `,
-      position: { left: "55%", bottom: "45%" },
-    },
-    {
-      id: 4,
-      title: "Phase - 4",
-      subtitle: "Long-Term Vision & Sustainability (2026 & Beyond)",
-      content: `
-        - Focus on long-term sustainability and scalability.
-        - Expand Nige globally while maintaining its core values.
-        - Drive innovation to empower communities worldwide.
-      `,
-      position: { left: "77%", bottom: "65%" },
-    },
-  ];
+  // const phases: Phase[] = [
+  //   {
+  //     id: 1,
+  //     title: "Phase - 1",
+  //     subtitle: "Foundation & Launch (Q3 2024)",
+  //     content: `
+  //       - Launch Nige on Solana with a smart contract audit.
+  //       - Start an initial marketing campaign and establish social media presence.
+  //       - Conduct AMAs for community engagement.
+  //       - Execute initial token sale and influencer partnerships.
+  //       - Develop and launch raffle systems.
+  //     `,
+  //     position: { left: "10%", bottom: "25%" },
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Phase - 2",
+  //     subtitle: "Growth & Expansion (Q4 2024 - Q1 2025)",
+  //     content: `
+  //       - Expand Nige's reach through partnerships with businesses and governments.
+  //       - Scale the platform to handle a growing user base.
+  //       - Launch new features based on user feedback.
+  //     `,
+  //     position: { left: "33%", bottom: "35%" },
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Phase - 3",
+  //     subtitle: "Platform Launch & Ecosystem Integration (Q2 2025 - Q4 2025)",
+  //     content: `
+  //       - Launch the full ecosystem with integrated tools.
+  //       - Collaborate with global partners for job placements.
+  //       - Foster a thriving blockchain ecosystem with continuous updates.
+  //     `,
+  //     position: { left: "55%", bottom: "45%" },
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Phase - 4",
+  //     subtitle: "Long-Term Vision & Sustainability (2026 & Beyond)",
+  //     content: `
+  //       - Focus on long-term sustainability and scalability.
+  //       - Expand Nige globally while maintaining its core values.
+  //       - Drive innovation to empower communities worldwide.
+  //     `,
+  //     position: { left: "77%", bottom: "65%" },
+  //   },
+  // ];
 
-  const togglePhase = (phaseId: number) => {
-    setOpenPhaseId(openPhaseId === phaseId ? null : phaseId);
-  };
+  // const togglePhase = (phaseId: number) => {
+  //   setOpenPhaseId(openPhaseId === phaseId ? null : phaseId);
+  // };
 
   return (
     <>
