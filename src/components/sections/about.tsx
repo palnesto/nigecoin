@@ -167,7 +167,7 @@ export function AboutSection() {
       <div className="bg-blue py-10 md:py-40 relative">
         {/* Green Background */}
         <div className="absolute transform -translate-x-1/2 left-1/2 -translate-y-1/2 top-[48%] w-screen h-[48rem] md:h-[60rem] lg:h-[21rem] xl:h-[24rem] 2xl:h-[30rem] bg-green z-0" />
-
+<div className="ease-[cubic-bezier(0.19,1,0.22,1)] absolute -top-[50px] -left-[75px] w-8 h-[155px] bg-white -z-10 rotate-[35deg] opacity-20 transition-all duration-500 group:left-[120%]"></div>
         {/* Content Section */}
         <div className="container mx-auto px-4">
           <div className="rounded-lg p-8 flex flex-col lg:flex-row lg:items-center">
