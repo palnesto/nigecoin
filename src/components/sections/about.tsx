@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaChevronUp } from "react-icons/fa";
+import { MakingVision } from "./making-vision";
 
 interface Phase {
   id: number;
@@ -164,7 +165,7 @@ export function AboutSection() {
       </div> */}
 
       <div className="bg-blue py-10 md:py-40 relative">
-        {/* Green Background */} 
+        {/* Green Background */}
         <div className="absolute transform -translate-x-1/2 left-1/2 -translate-y-1/2 top-[48%] w-screen h-[48rem] md:h-[60rem] lg:h-[21rem] xl:h-[24rem] 2xl:h-[30rem] bg-green z-0" />
 
         {/* Content Section */}
@@ -203,61 +204,7 @@ export function AboutSection() {
         </div>
       </div>
 
-      <div className="relative bg-blue overflow-x-auto">
-        <div className="min-w-[768px] w-full">
-          <h2 className="text-white text-7xl benz-grotesk relative left-32 top-44 md:text-3xl md:top-10 md:w-56 xl:text-6xl xl:top-60 xl:w-[450px]">
-            Making a Vision Reality
-          </h2>
-          <section className="w-full">
-            <img src="/public/graph.png" alt="Bar Graph" />
-          </section>
-
-          {phases.map((phase) => (
-            <div
-              key={phase.id}
-              className="absolute w-40 inter lg:w-[190px]"
-              style={{
-                left: phase.position.left,
-                bottom: phase.position.bottom,
-              }}
-            >
-              <section>
-                <p className="text-white font-bold">{phase.title}</p>
-                <p className="text-white font-bold">{phase.subtitle}</p>
-                <button
-                  onClick={() => togglePhase(phase.id)}
-                  className="flex items-center justify-center   py-1.5 px-2 rounded-full border-2 border-white text-white font-semibold transition duration-300"
-                >
-                  <span>SHOW MORE</span>
-                  <FaChevronUp
-                    className={`ml-2 transition-transform duration-300 ${
-                      openPhaseId === phase.id ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-              </section>
-              {openPhaseId === phase.id && (
-                <div className="fixed inset-0 bg-opacity-100 flex justify-center items-center z-50">
-                  <div className="bg-gray rounded-lg p-6 text-white relative w-11/12 max-w-lg inter">
-                    <button
-                      onClick={() => togglePhase(phase.id)}
-                      className="absolute top-4 right-4 text-white hover:text-red-500"
-                    >
-                      Close
-                    </button>
-                    <h3 className="text-lg font-bold">
-                      {phase.title} {phase.subtitle}
-                    </h3>
-                    <p className="text-white mt-4 whitespace-pre-line">
-                      {phase.content}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
+      <MakingVision />
     </>
   );
 }
