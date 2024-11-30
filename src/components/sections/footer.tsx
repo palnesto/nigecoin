@@ -69,48 +69,54 @@ export const FooterSection = () => {
 
   return (
     <footer id="contactus">
-      <section className="pt-16 pb-12 bg-[#030E2D] text-white text-center flex flex-row justify-between">
+       
+      <section className="relative py-40   border bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
+        <img src="/public/Vector.svg" alt="" className="absolute object-top -top-96" />
         <img
           src="/public/leftimg.png"
-          className="hidden md:block max-h-96 pt-[10.5rem]"
+          className="hidden md:block max-h-96 pt-[5.5rem]"
           alt="Left"
         />
 
-        <div className="text-center   items-center">
-          <h2 className="text-4xl font-bold pb-14 benz-grotesk">
+        <div className="text-center items-center">
+          <h2 className="text-4xl lg:text-7xl lg:pb-20 xl:pr-10 font-bold benz-grotesk">
             Team Onboard
           </h2>
-          <div className="flex flex-wrap justify-center gap-8 mb-8">
+          <div className="flex flex-wrap justify-center gap-20 mb-12">
             {teamMembers.slice(0, 4).map((member, index) => (
               <div key={index} className="relative flex flex-col items-center">
                 <div
-                  className="absolute -top-7 left-0 w-16 h-16 bg-no-repeat bg-center"
+                  className="absolute -top-4 -left-6 w-16 h-16 bg-no-repeat bg-center"
+                  // className="absolute -top-3 -left-2 w-16 h-9 bg-no-repeat  items-center"
                   style={{
                     backgroundImage: "url('/public/Vector (1).png')",
                   }}
                 ></div>
-
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full z-10 relative"
-                />
                 <div
-                  className="absolute -top-7 right-0 w-16 h-16 bg-no-repeat bg-center"
+                  className="absolute -top-3 -right-2 w-16 h-16 bg-no-repeat  items-center"
                   style={{
                     backgroundImage: "url('/public/Vector.png')",
                   }}
                 ></div>
 
+                <div className="relative">
+                 <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-52 h-52 rounded-full z-10"
+                />
+                 </div>
+                 
+
                 <h3 className="text-lg font-bold mt-4">{member.name}</h3>
-                <p className="text-sm text-green-500">{member.role}</p>
+                <p className="text-sm text-green">{member.role}</p>
               </div>
             ))}
           </div>
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-[#13BE5A] text-black px-6 py-3 rounded-full font-bold inter"
+            className="bg-[#13BE5A] text-black px-6 py-3 rounded-full font-bold inter lg:w-60 lg:h-16 lg:text-xl lg:mt-10"
           >
             View Team
           </button>
@@ -163,39 +169,39 @@ export const FooterSection = () => {
 
       <section
         id="contactus"
-        className=" bg-green flex flex-col-reverse gap-20 items-center md:flex-row justify-between px-4 max-h-fit"
+        className=" bg-green flex flex-col-reverse gap-4 items-center md:flex-row justify-between px-4 max-h-fit"
       >
         <img
-          className="w-full md:w-1/2 -mt-16 xl:-mt-[6rem] 2xl:-mt-[8rem]"
+          className="w-full md:w-1/2 -mt-16 xl:-mt-[6rem] 2xl:-mt-[8rem] z-10"
           src="/public/footerImage.png"
           alt=""
         />
-        <div className="text-white justify-items-center align-middle  w-full md:w-1/2  md:align-middle md:justify-items-end">
-          <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10">
+        <div className="text-white justify-items-center w-full md:justify-items-end lg:pr-7  md:align-middle  ">
+          <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10 lg:text-6xl">
             CONTACT US
           </h2>
-          <p className="inter-s">FOR ANY QUERIES, WRITE AN EMAIL TO</p>
+          <p className="inter-s lg:text-3xl">FOR ANY QUERIES, WRITE AN EMAIL TO</p>
           <a
             href="mailto:info@nigecoin.xyz"
-            className="text-blue-900 underline text-sm mb-8 inter-s"
+            className="text-blue-900 underline text-sm mb-8 inter-s lg:text-xl"
           >
             info@nigecoin.xyz
           </a>
-          <section className="pt-5 flex justify-center space-x-6">
-            <FaInstagramSquare className="text-3xl" />
-            <FaTwitter className="text-3xl" />
-            <FaYoutube className="text-3xl" />
-            <FaTelegram className="text-3xl" />
+          <section className="pt-5 flex justify-center space-x-6 lg:space-x-12 lg:py-10 ">
+            <FaInstagramSquare className="text-3xl lg:text-5xl" />
+            <FaTwitter className="text-3xl lg:text-5xl" />
+            <FaYoutube className="text-3xl lg:text-5xl" />
+            <FaTelegram className="text-3xl lg:text-5xl" />
           </section>
-          <section className="pt-6 font-bold ">
-            <ul className="flex space-x-6 text-sm mb-4">
+          <section className="pt-6 font-bold">
+            <ul className="flex space-x-6 text-sm mb-4 lg:text-2xl lg:pb-4 lg:gap-9">
               <li>
-                <a href="#tokenomics" className="hover:text-blue-900">
+                <a href="#tokenomics" className="hover:text-blue-900 leading-loose">
                   TOKONOMICS
                 </a>
               </li>
               <li>
-                <a href="#roadmap" className="hover:text-blue-900">
+                <a href="#roadmap" className="hover:text-blue-900 leading-loose">
                   ROADMAP
                 </a>
               </li>
@@ -210,10 +216,10 @@ export const FooterSection = () => {
                 </a>
               </li>
             </ul>
-            <p className="text-sm text-right ">
+            <p className="text-sm text-right lg:text-2xl">
               &copy; 2024 BY NIGECOIN. All RIGHTS RESERVED!
             </p>
-            <p className="text-sm text-right">PRIVACY POLICY</p>
+            <p className="text-sm text-right lg:text-2xl">PRIVACY POLICY</p>
           </section>
         </div>
       </section>

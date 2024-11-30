@@ -8,6 +8,9 @@ export default {
         blue: "#030E2E",
         gray: "#808286",
       },
+      boxShadow: {
+        custom: '0px 20px 30px -20px rgb(11,32,47)',
+      },
       fontFamily: {
         "heading-font": ["Benz Grotesk"],
         "body-font": ["Helvetica", "Arial", "sans-serif"],
@@ -22,6 +25,7 @@ export default {
         "coin-gradient":
           "radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(0, 169, 255, 0.4) 40%, #001f3f 100%)",
       },
+
       screens: {
         xs: { min: "320px", max: "640px" },
         "custom-lg": { max: "1089px", min: "1024px" },
