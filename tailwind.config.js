@@ -23,7 +23,7 @@ export default {
           "radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(0, 169, 255, 0.4) 40%, #001f3f 100%)",
       },
       screens: {
-        xs: "320px",
+        xs: { min: "320px", max: "640px" },
         "custom-lg": { max: "1089px", min: "1024px" },
         "4k": "2560px",
         "max-container": "1980px",
