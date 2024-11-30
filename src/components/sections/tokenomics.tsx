@@ -2,38 +2,38 @@ import { PieChart, Pie, Cell } from "recharts";
 
 export function TokenomicsSection() {
   const data = [
-    { name: "Ecosystem", value: 30, color: "#2e7d32" },
-    { name: "Private Sale", value: 12.5, color: "#66bb6a" },
-    { name: "CEX Listing", value: 20, color: "#29b6f6" },
-    { name: "Founders & Team", value: 10, color: "#5c6bc0" },
-    { name: "Founders/Reserve", value: 10, color: "#ab47bc" },
-    { name: "Marketing", value: 7, color: "#ffa726" },
-    { name: "Advisors", value: 3, color: "#8d6e63" },
-    { name: "KOLs", value: 5, color: "#ffd54f" },
-    { name: "Public Sale", value: 2.5, color: "#f06292" },
+    { name: "Ecosystem", value: 30, color: "#1A7338" },
+    { name: "Private Sale", value: 12.5, color: "#00B53E" },
+    { name: "CEX Listing", value: 20, color: "#09C1E0" },
+    { name: "Founders & Team", value: 10, color: "#09C1E0" },
+    { name: "Founders/Reserve", value: 10, color: "#5271FF" },
+    { name: "Marketing", value: 7, color: "#004AAD" },
+    { name: "Advisors", value: 3, color: "#7ED763" },
+    { name: "KOLs", value: 5, color: "#C0FF72" },
+    { name: "Public Sale", value: 2.5, color: "#0BB18E" },
   ];
 
   return (
-    <div className="flex flex-col 2xl:flex-row lg:flex-row lg: justify-between bg-[#f7f6e1] ">
+    <div className="flex flex-col 2xl:flex-row lg:flex-row lg: justify-between bg-[#f7f6e1]" id="tokenomics">
       
       <div className=" lg:w-1/2 flex flex-col justify-center pt-6">
-        <h2 className="text-4xl font-extrabold benz-grotesk text-center">Tokenomics of Nige</h2>
+        <h2 className="text-4xl font-extrabold benz-grotesk text-center xl:text-5xl">Tokenomics of Nige</h2>
         <img
           src="/public/people.png"
           alt="People"
-          className="w-full   max-w-lg mx-auto"
+          className="w-full xl:w-[40vw]   mx-auto"
         />
       </div>
  
       <div className=" lg:w-1/2 flex justify-center  ">
-        <PieChart width={600} height={500}  >
+        <PieChart width={800} height={800}  >
           <Pie
             data={data}
             dataKey="value"
             nameKey="name"
             cx="50%"
             cy="50%"
-            outerRadius={150}
+            outerRadius={250}
             fill="#8884d8"
             label={({ name, percent }) =>
               `${name} ${percent ? (percent * 100).toFixed(1) + "%" : ""}`

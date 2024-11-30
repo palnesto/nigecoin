@@ -19,7 +19,7 @@ export const FooterSection = () => {
   ];
 
   return (
-    <footer> 
+    <footer id="contactus"> 
       <section className="pt-16 pb-12 bg-[#030E2D] text-white text-center flex flex-row justify-between">
        
   <img 
@@ -77,12 +77,12 @@ export const FooterSection = () => {
  
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-100 flex items-center justify-center z-50">
-          <div className="bg-[#030E2D] text-white rounded-lg relative overflow-hidden">
+          <div className="bg-[#030E2D] text-white rounded-lg relative overflow-hidden p-10 mt- ">
             <button
               onClick={() => setIsModalOpen(false)}
               className="absolute top-4 right-4 text-white hover:text-red-500"
             >
-              &times;
+              X
             </button>
             <h1 className="text-4xl font-bold mb-8 text-center">Team Onboard</h1>                                                                                                                     
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-h-[80vh] overflow-y-auto">
@@ -91,7 +91,7 @@ export const FooterSection = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-24 h-24 mx-auto rounded-full mb-4"
+                    className="w-36 h-36 mx-auto rounded-full mb-4"
                   />
                   <h3 className="font-semibold text-white">{member.name}</h3>
                   <p className="text-green">{member.role}</p>

@@ -1,7 +1,7 @@
 export function HeroSection() {
   return (
     <>
-      <div className="relative w-full aspect-[16/9] bg-hero bg-contain">
+      <div className="relative w-full aspect-[16/9] bg-hero bg-contain" id="home">
         <div className="px-5 sm:px-10 xl:px-20 flex flex-col justify-center h-full w-full">
           {/* heading */}
           <div className="flex flex-col gap-5 sm:gap-14 md:gap-20 lg:gap-28 xl:gap-36 sm:-translate-y-3 xl:-translate-y-5 2xl:-translate-y-10">
