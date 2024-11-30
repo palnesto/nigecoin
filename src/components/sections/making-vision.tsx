@@ -1,7 +1,9 @@
-import React from "react";
 import { BiChevronDown } from "react-icons/bi";
+import { usePopUpStore } from "../../stores";
 
 export const MakingVision = () => {
+  const { value, setId } = usePopUpStore();
+
   return (
     <div className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20">
       <div className="w-[300vw] sm:w-[200vw] md:w-full">
@@ -22,7 +24,13 @@ export const MakingVision = () => {
                 <h2 className="font-bold text-[4vw] sm:text-[3vw]">
                   Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => {
+                    console.log("happened");
+                    setId(1);
+                  }}
+                  className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
@@ -46,7 +54,10 @@ export const MakingVision = () => {
                 <h2 className="font-bold text-[4vw] sm:text-[3vw]">
                   Phase - 2 <br /> Growth & Expansion <br /> (Q4 2024 - Q1 2025)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => setId(2)}
+                  className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
@@ -71,7 +82,10 @@ export const MakingVision = () => {
                   Phase - 3 <br /> Platform Launch & <br /> Ecosystem
                   Integration <br /> (Q2 2025 - Q4 2025)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => setId(3)}
+                  className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
@@ -96,7 +110,10 @@ export const MakingVision = () => {
                   Phase - 4 <br /> Long-Term Vision & <br /> Sustainability{" "}
                   <br /> (2026 & Beyond)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => setId(4)}
+                  className="border-white border rounded-full uppercase text-center py-[1.5vw] text-[2.3vw] sm:text-[1.8vw] w-fit px-[2.6vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
@@ -125,7 +142,10 @@ export const MakingVision = () => {
                 <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                   Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => setId(1)}
+                  className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
@@ -147,7 +167,10 @@ export const MakingVision = () => {
                 <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                   Phase - 2 <br /> Growth & Expansion <br /> (Q4 2024 - Q1 2025)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => setId(2)}
+                  className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
@@ -170,7 +193,10 @@ export const MakingVision = () => {
                   Phase - 3 <br /> Platform Launch <br />& Ecosystem Integration{" "}
                   <br /> (Q2 2025 -Q4 2025)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => setId(3)}
+                  className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
@@ -194,7 +220,10 @@ export const MakingVision = () => {
                   <br />
                   (2026 & Beyond)
                 </h2>
-                <div className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150">
+                <div
+                  onClick={() => setId(4)}
+                  className="border-white border rounded-full uppercase text-center py-[0.5vw] text-[0.6vw] w-fit px-[1.2vw] flex justify-center items-center gap-2 hover:cursor-pointer hover:bg-white/10 transition-all duration-150"
+                >
                   show more
                   <BiChevronDown />
                 </div>
