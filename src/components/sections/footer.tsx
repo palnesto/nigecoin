@@ -68,9 +68,9 @@ export const FooterSection = () => {
   ];
 
   return (
-    <footer id="contactus">
+    <footer>
        
-      <section className="relative py-40   border bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
+      <section className="relative py-40 bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
         <img src="/public/Vector.svg" alt="" className="absolute object-top -top-96" />
         <img
           src="/public/leftimg.png"
@@ -86,8 +86,7 @@ export const FooterSection = () => {
             {teamMembers.slice(0, 4).map((member, index) => (
               <div key={index} className="relative flex flex-col items-center">
                 <div
-                  className="absolute -top-4 -left-6 w-16 h-16 bg-no-repeat bg-center"
-                  // className="absolute -top-3 -left-2 w-16 h-9 bg-no-repeat  items-center"
+                  className="absolute -top-4 -left-6 w-16 h-16 bg-no-repeat bg-center" 
                   style={{
                     backgroundImage: "url('/public/Vector (1).png')",
                   }}
@@ -176,32 +175,32 @@ export const FooterSection = () => {
           src="/public/footerImage.png"
           alt=""
         />
-        <div className="text-white justify-items-center w-full md:justify-items-end lg:pr-7  md:align-middle  ">
-          <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10 lg:text-6xl">
+        <div className="text-white justify-items-center w-full md:justify-items-end lg:pr-2 md:align-middle xl:pr-16">
+          <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10 lg:text-4xl xl:text-6xl">
             CONTACT US
           </h2>
-          <p className="inter-s lg:text-3xl">FOR ANY QUERIES, WRITE AN EMAIL TO</p>
+          <p className="inter-s lg:text-xl xl:text-2xl">FOR ANY QUERIES, WRITE AN EMAIL TO</p>
           <a
             href="mailto:info@nigecoin.xyz"
-            className="text-blue-900 underline text-sm mb-8 inter-s lg:text-xl"
+            className="text-blue-900 underline text-sm mb-8 inter-s lg:text-md xl:text-lg"
           >
             info@nigecoin.xyz
           </a>
-          <section className="pt-5 flex justify-center space-x-6 lg:space-x-12 lg:py-10 ">
-            <FaInstagramSquare className="text-3xl lg:text-5xl" />
-            <FaTwitter className="text-3xl lg:text-5xl" />
-            <FaYoutube className="text-3xl lg:text-5xl" />
-            <FaTelegram className="text-3xl lg:text-5xl" />
+          <section className="pt-5 flex justify-center sm:space-x-4 lg:space-x-7 lg:py-7 xl:py-1">
+            <FaInstagramSquare className="text-3xl lg:text-3xl xl:text-5xl" />
+            <FaTwitter className="text-3xl lg:text-3xl xl:text-5xl" />
+            <FaYoutube className="text-3xl lg:text-3xl xl:text-5xl" />
+            <FaTelegram className="text-3xl lg:text-3xl xl:text-5xl" />
           </section>
           <section className="pt-6 font-bold">
-            <ul className="flex space-x-6 text-sm mb-4 lg:text-2xl lg:pb-4 lg:gap-9">
+            <ul className="flex space-x-6 text-sm mb-4 lg:text-xl xl:text-2xl lg:pb-3">
               <li>
-                <a href="#tokenomics" className="hover:text-blue-900 leading-loose">
+                <a href="#tokenomics" className="hover:text-blue-900  ">
                   TOKONOMICS
                 </a>
               </li>
               <li>
-                <a href="#roadmap" className="hover:text-blue-900 leading-loose">
+                <a href="#roadmap" className="hover:text-blue-900  ">
                   ROADMAP
                 </a>
               </li>
@@ -216,10 +215,10 @@ export const FooterSection = () => {
                 </a>
               </li>
             </ul>
-            <p className="text-sm text-right lg:text-2xl">
+            <p className="text-sm text-right lg:text-xl xl:text-2xl">
               &copy; 2024 BY NIGECOIN. All RIGHTS RESERVED!
             </p>
-            <p className="text-sm text-right lg:text-2xl">PRIVACY POLICY</p>
+            <p className="text-sm text-right lg:text-xl xl:text-2xl">PRIVACY POLICY</p>
           </section>
         </div>
       </section>

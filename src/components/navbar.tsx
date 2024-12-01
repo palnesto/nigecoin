@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 const config = [
   { name: "Home", href: "#home" },
   { name: "About us", href: "#aboutus" },
-  { name: "Tokenomics", href: "#tokenomics" },
-  { name: "Roadmap", href: "#roadmap" },
-  { name: "Contact us", href: "#contactus" },
   { name: "White paper", href: "#whitepaper" },
+  { name: "Roadmap", href: "#roadmap" },  
+  { name: "Tokenomics", href: "#tokenomics" }, 
+  { name: "Contact us", href: "#contactus" },
 ];
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
