@@ -2,10 +2,13 @@ import { BiChevronDown } from "react-icons/bi";
 import { usePopUpStore } from "../../stores";
 
 export const MakingVision = () => {
-  const { value, setId } = usePopUpStore();
+  const { setId } = usePopUpStore();
 
   return (
-    <div id="roadmap" className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20">
+    <div
+      id="roadmap"
+      className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20"
+    >
       <div className="w-[300vw] sm:w-[200vw] md:w-full">
         <img src="/public/graph.png" alt="" className="w-full" />
       </div>
