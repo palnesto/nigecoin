@@ -101,7 +101,7 @@ const Popup = () => {
         </div>
         <div className="w-[35%] md:w-[25%] lg:w-[15%] absolute -bottom-24 -lg:bottom-8 xl:bottom-0 -right-10 md:translate-y-0">
           <img
-            src="/public/character.png"
+            src="/character.png"
             alt="eagle"
             className="h-full w-full object-contain"
           />

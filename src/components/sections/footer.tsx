@@ -12,68 +12,67 @@ export const FooterSection = () => {
     {
       name: "Stephanie Mac Avon",
       role: "Chief Executive Officer",
-      image: "/public/TeamOne.png",
+      image: "/TeamOne.png",
     },
     {
       name: "Steven Harris",
       role: "Marketing Head",
-      image: "/public/TeamTwo.png",
+      image: "/TeamTwo.png",
     },
     {
       name: "Astrid Robinson",
       role: "Business Developer",
-      image: "/public/TeamThree.png",
+      image: "/TeamThree.png",
     },
     {
       name: "Sergi Giorgios",
       role: "Finance Strategist",
-      image: "/public/TeamFour.png",
+      image: "/TeamFour.png",
     },
     {
       name: "John Doe",
       role: "Technology Officer",
-      image: "/public/TeamOne.png",
+      image: "/TeamOne.png",
     },
     {
       name: "Jane Smith",
       role: "Operations Lead",
-      image: "/public/TeamTwo.png",
+      image: "/TeamTwo.png",
     },
-    { name: "Richard Roe", role: "HR Manager", image: "/public/TeamThree.png" },
+    { name: "Richard Roe", role: "HR Manager", image: "/TeamThree.png" },
     {
       name: "Emily White",
       role: "Project Manager",
-      image: "/public/TeamFour.png",
+      image: "/TeamFour.png",
     },
     {
       name: "Lucas Black",
       role: "Financial Analyst",
-      image: "/public/TeamOne.png",
+      image: "/TeamOne.png",
     },
     {
       name: "Michael Brown",
       role: "Marketing Strategist",
-      image: "/public/TeamTwo.png",
+      image: "/TeamTwo.png",
     },
     {
       name: "Olivia Green",
       role: "Sales Head",
-      image: "/public/TeamThree.png",
+      image: "/TeamThree.png",
     },
     {
       name: "Daniel Blue",
       role: "Client Relations",
-      image: "/public/TeamFour.png",
+      image: "/TeamFour.png",
     },
   ];
 
   return (
     <footer>
-       
       <section className="relative py-40 bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
-        <img src="/public/Vector.svg" alt="" className="absolute object-top -top-96" />
+        <img src="/Vector.svg" alt="" className="absolute object-top -top-96" />
         <img
-          src="/public/leftimg.png"
+          src="/leftimg.png"
           className="hidden md:block max-h-96 pt-[5.5rem]"
           alt="Left"
         />
@@ -86,7 +85,7 @@ export const FooterSection = () => {
             {teamMembers.slice(0, 4).map((member, index) => (
               <div key={index} className="relative flex flex-col items-center">
                 <div
-                  className="absolute -top-4 -left-6 w-16 h-16 bg-no-repeat bg-center" 
+                  className="absolute -top-4 -left-6 w-16 h-16 bg-no-repeat bg-center"
                   style={{
                     backgroundImage: "url('/public/Vector (1).png')",
                   }}
@@ -99,13 +98,12 @@ export const FooterSection = () => {
                 ></div>
 
                 <div className="relative">
-                 <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-52 h-52 rounded-full z-10"
-                />
-                 </div>
-                 
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-52 h-52 rounded-full z-10"
+                  />
+                </div>
 
                 <h3 className="text-lg font-bold mt-4">{member.name}</h3>
                 <p className="text-sm text-green">{member.role}</p>
@@ -122,7 +120,7 @@ export const FooterSection = () => {
         </div>
 
         <img
-          src="/public/rightimg.png"
+          src="/rightimg.png"
           className="hidden md:block max-h-96"
           alt="Right"
         />
@@ -172,14 +170,16 @@ export const FooterSection = () => {
       >
         <img
           className="w-full md:w-1/2 -mt-16 xl:-mt-[6rem] 2xl:-mt-[8rem] z-10"
-          src="/public/footerImage.png"
+          src="/footerImage.png"
           alt=""
         />
         <div className="text-white justify-items-center w-full md:justify-items-end lg:pr-2 md:align-middle xl:pr-16">
           <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10 lg:text-4xl xl:text-6xl">
             CONTACT US
           </h2>
-          <p className="inter-s lg:text-xl xl:text-2xl">FOR ANY QUERIES, WRITE AN EMAIL TO</p>
+          <p className="inter-s lg:text-xl xl:text-2xl">
+            FOR ANY QUERIES, WRITE AN EMAIL TO
+          </p>
           <a
             href="mailto:info@nigecoin.xyz"
             className="text-blue-900 underline text-sm mb-8 inter-s lg:text-md xl:text-lg"
@@ -218,7 +218,9 @@ export const FooterSection = () => {
             <p className="text-sm text-right lg:text-xl xl:text-2xl">
               &copy; 2024 BY NIGECOIN. All RIGHTS RESERVED!
             </p>
-            <p className="text-sm text-right lg:text-xl xl:text-2xl">PRIVACY POLICY</p>
+            <p className="text-sm text-right lg:text-xl xl:text-2xl">
+              PRIVACY POLICY
+            </p>
           </section>
         </div>
       </section>

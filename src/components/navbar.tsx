@@ -4,8 +4,8 @@ const config = [
   { name: "Home", href: "#home" },
   { name: "About us", href: "#aboutus" },
   { name: "White paper", href: "#whitepaper" },
-  { name: "Roadmap", href: "#roadmap" },  
-  { name: "Tokenomics", href: "#tokenomics" }, 
+  { name: "Roadmap", href: "#roadmap" },
+  { name: "Tokenomics", href: "#tokenomics" },
   { name: "Contact us", href: "#contactus" },
 ];
 export const Navbar = () => {
@@ -37,7 +37,7 @@ export const Navbar = () => {
       <div className="flex items-center gap-2">
         <div className="aspect-square h-12 xl:h-[75px]">
           <img
-            src="/public/logo.png"
+            src="/logo.png"
             alt="logo"
             className="w-full h-full object-contain"
           />

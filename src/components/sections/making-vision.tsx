@@ -10,7 +10,7 @@ export const MakingVision = () => {
       className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20"
     >
       <div className="w-[300vw] sm:w-[200vw] md:w-full">
-        <img src="/public/graph.png" alt="" className="w-full" />
+        <img src="/graph.png" alt="" className="w-full" />
       </div>
       <div className="benz-grotesk text-white text-[49px] xs:text-[55px]sm:text-[63.8px] md:text-[4vw] md:top-[4vw] max-container:text-[79.2px] max-container:left-[100px] absolute top-[15vw] sm:top-[10vw] left-[11vw] sm:left-[7vw]">
         Making a <br /> Vision Reality
@@ -41,7 +41,7 @@ export const MakingVision = () => {
               {/* eagle image */}
               <div className="w-[40%] absolute bottom-[24vw] sm:bottom-[16vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain opa"
                 />
@@ -68,7 +68,7 @@ export const MakingVision = () => {
               {/* eagle image */}
               <div className="w-[40%] absolute bottom-[38vw] sm:bottom-[25vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain"
                 />
@@ -96,7 +96,7 @@ export const MakingVision = () => {
               {/* eagle image */}
               <div className="w-[40%] absolute bottom-[55vw] sm:bottom-[38vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain"
                 />
@@ -124,7 +124,7 @@ export const MakingVision = () => {
               {/* eagle image */}
               <div className="w-[40%] absolute bottom-[90vw] sm:bottom-[60vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain"
                 />
@@ -155,7 +155,7 @@ export const MakingVision = () => {
               </div>
               <div className="w-[40%] absolute bottom-[32%] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain"
                 />
@@ -180,7 +180,7 @@ export const MakingVision = () => {
               </div>
               <div className="w-[40%] absolute bottom-[45%] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain"
                 />
@@ -206,7 +206,7 @@ export const MakingVision = () => {
               </div>
               <div className="w-[40%] absolute bottom-[57%] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain"
                 />
@@ -233,7 +233,7 @@ export const MakingVision = () => {
               </div>
               <div className="w-[40%] absolute bottom-[76%] right-[0%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
-                  src="/public/character.png"
+                  src="/character.png"
                   alt="eagle"
                   className="h-full w-full object-contain"
                 />
