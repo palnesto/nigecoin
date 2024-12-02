@@ -70,7 +70,11 @@ export const FooterSection = () => {
   return (
     <footer>
       <section className="relative py-40 bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
-        <img src="/public/Vector.svg" alt="" className="absolute object-top -top-[350px]" />
+        <img
+          src="/public/Vector.svg"
+          alt=""
+          className="absolute object-top -top-[350px]"
+        />
         <img
           src="/public/Mask group copy.png"
           className="hidden lg:block md:h-40 lg:h-56 mt-60 -ml-16  transform scale-x-[-1]"
