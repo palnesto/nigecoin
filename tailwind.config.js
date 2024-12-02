@@ -16,12 +16,12 @@ export default {
         "body-font": ["Helvetica", "Arial", "sans-serif"],
       },
       backgroundImage: {
-        hero: "url('/public/hero.png')",
-        logo: "url('/public/logo.png')",
-        footerimg: "url('/public/footerImage.png')",
-        leftimg: "url('/public/sideImage.png')",
-        graphimg: "url('/public/graph.png')",
-        localimg: "url('/public/images.jpeg')",
+        hero: "url('/hero.png')",
+        logo: "url('/logo.png')",
+        footerimg: "url('/footerImage.png')",
+        leftimg: "url('/sideImage.png')",
+        graphimg: "url('/graph.png')",
+        localimg: "url('/images.jpeg')",
         "coin-gradient":
           "radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(0, 169, 255, 0.4) 40%, #001f3f 100%)",
       },

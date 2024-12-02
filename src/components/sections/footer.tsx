@@ -71,12 +71,12 @@ export const FooterSection = () => {
     <footer>
       <section className="relative py-40 bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
         <img
-          src="/public/Vector.svg"
+          src="/Vector.svg"
           alt=""
           className="absolute object-top -top-[350px]"
         />
         <img
-          src="/public/Mask group copy.png"
+          src="/Mask group copy.png"
           className="hidden lg:block md:h-40 lg:h-56 mt-60 -ml-16  transform scale-x-[-1]"
           alt="Left"
         />
@@ -91,13 +91,13 @@ export const FooterSection = () => {
                 <div
                   className="absolute -top-4 -left-6 w-16 h-16 bg-no-repeat bg-center"
                   style={{
-                    backgroundImage: "url('/public/Vector (1).png')",
+                    backgroundImage: "url('/Vector (1).png')",
                   }}
                 ></div>
                 <div
                   className="absolute -top-3 -right-2 w-16 h-16 bg-no-repeat  items-center"
                   style={{
-                    backgroundImage: "url('/public/Vector.png')",
+                    backgroundImage: "url('/Vector.png')",
                   }}
                 ></div>
 
@@ -124,7 +124,7 @@ export const FooterSection = () => {
         </div>
 
         <img
-          src="/public/Mask group copy.png"
+          src="/Mask group copy.png"
           className="relative hidden lg:block md:h-60 lg:h-72 -mr-28"
           alt="Right"
         />
