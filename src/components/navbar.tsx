@@ -91,9 +91,12 @@ export const Navbar = () => {
           isOpen ? "block" : "hidden"
         } absolute xl:hidden top-20 left-0 w-full bg-blue p-4 xl:relative  xl:bg-transparent xl:top-0 xl:left-auto xl:w-auto`}
       >
-        <ul className="xl:flex xl:space-x-6 xl:p-0">
+        <ul className="xl:flex-row xl:space-x-6 xl:p-0 flex flex-col gap-1">
           {config.map((item) => (
-            <li key={item.name}>
+            <li
+              key={item.name}
+              className="sm:hover:bg-white/20 px-2 rounded-lg"
+            >
               <a
                 href={item.href}
                 className={`block py-3 xl:py-0 xl:tracking-wider ${
