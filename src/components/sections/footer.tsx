@@ -70,15 +70,15 @@ export const FooterSection = () => {
   return (
     <footer>
       <section className="relative py-40 bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
-        <img src="/Vector.svg" alt="" className="absolute object-top -top-96" />
+        <img src="/public/Vector.svg" alt="" className="absolute object-top -top-[350px]" />
         <img
-          src="/leftimg.png"
-          className="hidden md:block max-h-96 pt-[5.5rem]"
+          src="/public/Mask group copy.png"
+          className="hidden lg:block md:h-40 lg:h-56 mt-60 -ml-16  transform scale-x-[-1]"
           alt="Left"
         />
 
         <div className="text-center items-center">
-          <h2 className="text-4xl lg:text-7xl lg:pb-20 xl:pr-10 font-bold benz-grotesk">
+          <h2 className="relative md:mt-10 pb-16 md:mb-11 text-4xl md:text-5xl lg:text-6xl xl:text-6xl lg:pb-20 xl:pr-10 font-bold benz-grotesk">
             Team Onboard
           </h2>
           <div className="flex flex-wrap justify-center gap-20 mb-12">
@@ -113,15 +113,15 @@ export const FooterSection = () => {
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-[#13BE5A] text-black px-6 py-3 rounded-full font-bold inter lg:w-60 lg:h-16 lg:text-xl lg:mt-10"
+            className="bg-[#13BE5A] text-black px-14 py-5 rounded-full font-bold inter sm:text-2xl md:text-2xl md:w-64 md:h-20 lg:w-72 lg:h-20 lg:text-3xl lg:mt-10"
           >
             View Team
           </button>
         </div>
 
         <img
-          src="/rightimg.png"
-          className="hidden md:block max-h-96"
+          src="/public/Mask group copy.png"
+          className="relative hidden lg:block md:h-60 lg:h-72 -mr-28"
           alt="Right"
         />
       </section>
@@ -186,7 +186,7 @@ export const FooterSection = () => {
           >
             info@nigecoin.xyz
           </a>
-          <section className="pt-5 flex justify-center sm:space-x-4 lg:space-x-7 lg:py-7 xl:py-1">
+          <section className="pt-5 flex justify-center space-x-4 sm:space-x-4 lg:space-x-7 lg:py-7 xl:py-1">
             <FaInstagramSquare className="text-3xl lg:text-3xl xl:text-5xl" />
             <FaTwitter className="text-3xl lg:text-3xl xl:text-5xl" />
             <FaYoutube className="text-3xl lg:text-3xl xl:text-5xl" />
