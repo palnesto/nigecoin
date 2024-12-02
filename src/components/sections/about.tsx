@@ -31,7 +31,7 @@ export function AboutSection() {
             />
           </div>
 
-          <p className="text-white z-10 text-sm md:text-lg max-w-7xl text-start 2xl:text-3xl mx-4 poppins">
+          <p className="text-white lg:text-xl 2xl:text-xl tracking-wider z-10 text-justify max-w-7xl mx-4 poppins leading-7">
             Across Africa, with unemployment rates reaching 30% in some areas,
             job instability affects millions. Nige Coin offers hope through a
             blockchain platform connecting employers with skilled workers. By
@@ -160,13 +160,14 @@ const GivingText = () => {
   return (
     <div className="flex flex-col gap-3 items-center lg:items-start">
       <GivingHeading />
-      <p className="text-justify poppins">
-        Across Africa, with unemployment rates reaching 30% in some areas, job
-        instability affects millions. Nige Coin offers hope through a blockchain
-        platform connecting employers with skilled workers. By promoting
-        transparent job placements, it aims to reduce unemployment and empower
-        individuals with stable jobs, driving economic growth and inviting
-        global investment in Africa's vibrant future.
+      <p className="text-justify poppins lg:text-lg 2xl:text-xl tracking-wide">
+        The Nige Community provides a platform for traders to sharpen their
+        skills, collaborate, and achieve financial success. Members gain funded
+        trading accounts, eliminating financial barriers and focusing on
+        strategy refinement. The community offers exclusive resources such as
+        market analysis tools, trading signals, and expert webinars. With
+        regular trading challenges and mentorship, it supports a dynamic
+        environment for traders at all levels to thrive.
       </p>
     </div>
   );
