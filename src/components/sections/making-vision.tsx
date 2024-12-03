@@ -39,7 +39,7 @@ export const MakingVision = () => {
                 </div>
               </div>
               {/* eagle image */}
-              <div className="w-[40%] absolute bottom-[24vw] sm:bottom-[16vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-[40%] absolute bottom-[24vw] sm:bottom-[16vw] right-[-5%] opacity-100 transition-opacity duration-300">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -80,7 +80,7 @@ export const MakingVision = () => {
             <div className="relative h-full w-full sm:group-hover:cursor-pointer">
               {/* <Gradient /> */}
               {/* title + button */}
-              <div className="absolute w-[80%] bottom-[63vw] sm:bottom-[40vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] sm:text-white/70 ">
+              <div className="absolute w-[80%] bottom-[63vw] sm:bottom-[40vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white/70">
                 <h2 className="font-bold text-[4vw] sm:text-[3vw]">
                   Phase - 3 <br /> Platform Launch & <br /> Ecosystem
                   Integration <br /> (Q2 2025 - Q4 2025)
