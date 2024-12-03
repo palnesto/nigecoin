@@ -7,9 +7,14 @@ export default {
         green: "#13BE5A",
         blue: "#030E2E",
         gray: "#808286",
+        "color-chrome": "#4285F4",
+        "color-safari": "#FFAC44",
+        "color-firefox": "#FF7139",
+        "color-edge": "#0078D7",
+        "color-other": "#A1A1A1",
       },
       boxShadow: {
-        custom: '0px 20px 30px -20px rgb(11,32,47)',
+        custom: "0px 20px 30px -20px rgb(11,32,47)",
       },
       fontFamily: {
         "heading-font": ["Benz Grotesk"],

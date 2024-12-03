@@ -10,6 +10,7 @@ import {
 } from "./components/sections";
 import { StoreData, usePopUpStore } from "./stores";
 import { FaXmark } from "react-icons/fa6";
+import { ChartComponent } from "../src/components/chart";
 
 export const storeData: StoreData[] = [
   {
@@ -26,30 +27,34 @@ export const storeData: StoreData[] = [
   {
     id: 2,
     title: "Phase 2: Growth and Expansion (Q4 2024 - Q1 2025)",
-    listItem: ["Enhance marketing efforts and community events",
-               "Continue community AMAs and educational webinars",
-                "Launch Nige Trading Community with resources and funded accounts",
-                "Form strategic partnerships and start NigeLink platform development",
-                 "Expand raffles and introduce special event prizes.", 
-              ]
+    listItem: [
+      "Enhance marketing efforts and community events",
+      "Continue community AMAs and educational webinars",
+      "Launch Nige Trading Community with resources and funded accounts",
+      "Form strategic partnerships and start NigeLink platform development",
+      "Expand raffles and introduce special event prizes.",
+    ],
   },
   {
     id: 3,
-    title: "Phase 3: Platform Launch and Ecosystem Integration (Q2 2025 - Q4 2025)",
-    listItem: ["Publicly launch NigeLink for global job connections.",
-               "Develop Nige Academy in the metaverse with web3 and blockchain courses.",
-               "Add staking and yield farming to the ecosystem.",
-               "Extend outreach globally and participate in international conferences."
-              ],
+    title:
+      "Phase 3: Platform Launch and Ecosystem Integration (Q2 2025 - Q4 2025)",
+    listItem: [
+      "Publicly launch NigeLink for global job connections.",
+      "Develop Nige Academy in the metaverse with web3 and blockchain courses.",
+      "Add staking and yield farming to the ecosystem.",
+      "Extend outreach globally and participate in international conferences.",
+    ],
   },
   {
     id: 4,
     title: "Phase 4: Long-Term Vision and Sustainability (2026 and Beyond)",
-    listItem: ["Continually update NigeLink based on user input and market trends.",
-              "Introduce community governance for decision-making.",
-              "Implement sustainability and philanthropic initiatives.",
-              "Establish Nige as a global leader in web3 for empowering African talent."
-],
+    listItem: [
+      "Continually update NigeLink based on user input and market trends.",
+      "Introduce community governance for decision-making.",
+      "Implement sustainability and philanthropic initiatives.",
+      "Establish Nige as a global leader in web3 for empowering African talent.",
+    ],
   },
 ];
 function App() {
