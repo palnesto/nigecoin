@@ -10,7 +10,6 @@ import {
 } from "./components/sections";
 import { StoreData, usePopUpStore } from "./stores";
 import { FaXmark } from "react-icons/fa6";
-import { ChartComponent } from "../src/components/chart";
 
 export const storeData: StoreData[] = [
   {

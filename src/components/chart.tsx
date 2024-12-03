@@ -1,85 +1,255 @@
-import { Pie, PieChart } from "recharts";
+import { useEffect, useRef, useState } from "react";
+import { Pie, PieChart, Cell } from "recharts";
+import { ChartContainer, ChartTooltip } from "./ui/chart";
 
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "./ui/chart";
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+const data = [
+  {
+    name: "Ecosystem",
+    value: 30,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+  {
+    name: "Founders/Reserve",
+    value: 10,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+
+  {
+    name: "KOLs",
+    value: 5,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+  {
+    name: "CEX Listing",
+    value: 20,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+  {
+    name: "Private Sale",
+    value: 12.5,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+  {
+    name: "Public Sale",
+    value: 2.5,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+
+  {
+    name: "Founders & Team",
+    value: 10,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+  {
+    name: "Marketing",
+    value: 7,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
+  {
+    name: "Advisors",
+    value: 3,
+    tooltipData: {
+      Allocation: "kjsdnfklj",
+      Vesting: "sdkjfnlsdmf",
+      Pricing: "kjdsnfl",
+    },
+  },
 ];
 
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
+type ChartConfigKey =
+  | "Ecosystem"
+  | "Private Sale"
+  | "KOLs"
+  | "CEX Listing"
+  | "Public Sale"
+  | "Founders/Reserve"
+  | "Founders & Team"
+  | "Marketing"
+  | "Advisors";
+
+type ChartConfig = Record<ChartConfigKey, { label: string; color: string }>;
+
+const chartConfig: ChartConfig = {
+  Ecosystem: {
+    label: "Ecosystem",
     color: "hsl(var(--chart-1))",
   },
-  safari: {
-    label: "Safari",
+  "Private Sale": {
+    label: "Private Sale",
     color: "hsl(var(--chart-2))",
   },
-  firefox: {
-    label: "Firefox",
+  KOLs: {
+    label: "KOLs",
     color: "hsl(var(--chart-3))",
   },
-  edge: {
-    label: "Edge",
+  "CEX Listing": {
+    label: "CEX Listing",
     color: "hsl(var(--chart-4))",
   },
-  other: {
-    label: "Other",
+  "Public Sale": {
+    label: "Public Sale",
     color: "hsl(var(--chart-5))",
   },
-} satisfies ChartConfig;
+  "Founders/Reserve": {
+    label: "Founders/Reserve",
+    color: "hsl(var(--chart-6))",
+  },
+  "Founders & Team": {
+    label: "Founders & Team",
+    color: "hsl(var(--chart-7))",
+  },
+  Marketing: {
+    label: "Marketing",
+    color: "hsl(var(--chart-8))",
+  },
+  Advisors: {
+    label: "Advisors",
+    color: "hsl(var(--chart-9))",
+  },
+};
 
 export function ChartComponent() {
+  const [width, setWidth] = useState(0);
+
+  const containerRef = useResizeObserver<HTMLDivElement>((entry) => {
+    setWidth(entry.contentRect.width); // Dynamically adjust based on width
+  });
+
+  const scaledWidth = width * 0.9; // Reduce width by 10%
+
+  const getOuterRadius = (width: number) => {
+    // Define breakpoints and adjust outer radius based on screen size
+    if (width <= 400) {
+      return "40%"; // Small screens
+    } else if (width <= 768) {
+      return "49%"; // Medium screens
+    } else {
+      return "60%"; // Large screens
+    }
+  };
+
+  const outerRadius = getOuterRadius(width);
+
+  if (!width) {
+    return <div ref={containerRef} className="w-full h-auto aspect-square" />;
+  }
+
   return (
-    <div className="bg-orange-500 grid place-content-center w-full aspect-square h-full">
-      <ChartContainer
-        config={chartConfig}
-        className="mx-auto aspect-square max-h-[400px] px-0 h-[300px] xs:[300px] sm:h-[100%]"
-      >
-        <PieChart>
-          <ChartTooltip
-            content={
-              <ChartTooltipContent
-                className="bg-white"
-                nameKey="visitors"
-                hideLabel
-              />
-            }
-          />
+    <div ref={containerRef} className="w-full h-auto aspect-square">
+      <ChartContainer config={chartConfig} className="w-full h-full">
+        <PieChart width={scaledWidth} height={scaledWidth}>
+          <ChartTooltip content={<CustomTooltip data={data} />} />
           <Pie
-            data={chartData}
-            dataKey="visitors"
+            data={data}
+            dataKey="value"
             labelLine={false}
-            label={({ payload, ...props }) => {
-              return (
-                <text
-                  cx={props.cx}
-                  cy={props.cy}
-                  x={props.x}
-                  y={props.y}
-                  textAnchor={props.textAnchor}
-                  dominantBaseline={props.dominantBaseline}
-                  fill="hsla(var(--foreground))"
-                >
-                  {payload.visitors}
-                </text>
-              );
-            }}
-            nameKey="browser"
-          />
+            label={({ payload, ...props }) => (
+              <text
+                cx={props.cx}
+                cy={props.cy}
+                x={props.x}
+                y={props.y}
+                width={props.width}
+                textAnchor={props.textAnchor}
+                dominantBaseline={props.dominantBaseline}
+                fill="hsla(var(--foreground))"
+                className="text-xs font-semibold"
+              >
+                {`${payload.name}\n${payload.value}%`}
+              </text>
+            )}
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            outerRadius={outerRadius} // Use the dynamically calculated outerRadius
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={
+                  chartConfig[entry.name as keyof typeof chartConfig]?.color ||
+                  "hsl(var(--gray-500))"
+                }
+              />
+            ))}
+          </Pie>
         </PieChart>
       </ChartContainer>
     </div>
   );
+}
+function CustomTooltip({ active, payload, data }: any) {
+  if (active && payload && payload.length) {
+    const { name } = payload[0].payload;
+    const tooltipData = data.find(
+      (entry: any) => entry.name === name
+    )?.tooltipData;
+
+    if (tooltipData) {
+      return (
+        <div className="bg-white p-2 rounded shadow-md text-xs">
+          <p className="font-bold">{name}</p>
+          {Object.entries(tooltipData).map(([key, value]) => (
+            <p key={key} className="text-gray-600">
+              <span className="font-semibold">{key}:</span> {value as number}
+            </p>
+          ))}
+        </div>
+      );
+    }
+  }
+
+  return null;
+}
+
+function useResizeObserver<T extends HTMLElement>(
+  callback: (entry: ResizeObserverEntry) => void
+) {
+  const ref = useRef<T | null>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new ResizeObserver(([entry]) => callback(entry));
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [callback]);
+
+  return ref;
 }
