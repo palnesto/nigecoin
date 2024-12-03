@@ -7,18 +7,18 @@ const data = [
     name: "Ecosystem",
     value: 30,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "300,000,000 $NIGE",
+      Vesting: "Locked for 6 months, with linear vesting over 36 months.",
+      
     },
   },
   {
     name: "Founders/Reserve",
     value: 10,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "100,000,000 $NIGE",
+      Vesting: "Locked for 12 months, with linear vesting over 30 months.",
+      
     },
   },
 
@@ -26,36 +26,36 @@ const data = [
     name: "KOLs",
     value: 5,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "50,000,000 $NIGE",
+      Vesting: "20% released at TGE, followed by a 3-month lockup, with linear vesting over 36 months.",
+      Pricing: "0.0001 SOL per token",
     },
   },
   {
     name: "CEX Listing",
     value: 20,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "200,000,000 $NIGE",
+      Vesting: " Locked for 3 months, with linear vesting over 36 months.",
+      
     },
   },
   {
     name: "Private Sale",
     value: 12.5,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "125,000,000 $NIGE",
+      Vesting: " 20% released at the Token Generation Event (TGE), followed by a 3-month lockup, with linear vesting over 36 months.",
+      Pricing: "0.0001 SOL per token",
     },
   },
   {
     name: "Public Sale",
     value: 2.5,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "25,000,000 $NIGE",
+      Vesting: "25% released at TGE with the remaining tokens vested linearly over 6 months.",
+      Pricing: "0.0002 SOL per token",
     },
   },
 
@@ -63,27 +63,27 @@ const data = [
     name: "Founders & Team",
     value: 10,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "100,000,000 $NIGE",
+      Vesting: " Locked for 12 months, with linear vesting over 30 months.",
+    
     },
   },
   {
     name: "Marketing",
     value: 7,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "70,000,000 $NIGE",
+      Vesting: " Locked for 3 months, with linear vesting over 36 months.",
+      
     },
   },
   {
     name: "Advisors",
     value: 3,
     tooltipData: {
-      Allocation: "kjsdnfklj",
-      Vesting: "sdkjfnlsdmf",
-      Pricing: "kjdsnfl",
+      Allocation: "30,000,000 $NIGE",
+      Vesting: "Locked for 12 months, with linear vesting over 30 months.",
+      
     },
   },
 ];
