@@ -51,6 +51,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ x, y, name, percent }) => {
       >
         {name}
       </Text>
+      
       <Text
         x={adjustedX}
         y={adjustedY! + 20} // Adjust to add space between name and percentage
@@ -59,7 +60,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ x, y, name, percent }) => {
         textAnchor="start"
         verticalAnchor="end"
       >
-        {percentage}%
+        {`${percentage}%`}
       </Text>
     </>
   );
