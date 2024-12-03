@@ -11,7 +11,7 @@ export function AboutSection() {
           alt=""
         />
         <div className="bg-blue flex flex-col items-center justify-center pt-10 pb-16 px-4 lg:px-8">
-          <h1 className="text-center z-10 benz-grotesk text-white text-base md:text-xl lg:text-2xl xl:text-4xl font-bold tracking-wider">
+          <h1 className="z-10 benz-grotesk text-white text-base md:text-xl lg:text-2xl xl:text-4xl font-bold tracking-wider text-justify">
             CONNECTING AFRICANS TO <br /> OPPORTUNITIES WORLDWIDE
           </h1>
 
@@ -31,7 +31,7 @@ export function AboutSection() {
             />
           </div>
 
-          <p className="text-white lg:text-xl 2xl:text-xl tracking-wider z-10 text-justify max-w-7xl mx-4 poppins leading-7">
+          <p className="text-white lg:text-xl 2xl:text-xl tracking-wider z-10 text-justify  max-w-7xl mx-4 poppins leading-7">
             Across Africa, with unemployment rates reaching 30% in some areas,
             job instability affects millions. Nige Coin offers hope through a
             blockchain platform connecting employers with skilled workers. By
@@ -45,8 +45,7 @@ export function AboutSection() {
           className="absolute hidden md:block h-72 -right-28 top-12"
         />
       </section>
-
-      {/* <GreenComp /> */}
+ 
       <GreenComp2 />
 
       <MakingVision />
@@ -104,7 +103,7 @@ export function AboutSection() {
 
 const GreenComp2 = () => {
   return (
-    <div className="bg-green mt-40 lg:my-32 xl:my-48 px-8 md:px-16 xl:px-24 pb-20 lg:py-12 xl:py-20 relative">
+    <section className="bg-green mt-40 lg:my-32 xl:my-48 px-8 md:px-16 xl:px-24 pb-20 lg:py-12 xl:py-20 relative h-full" id="aboutus">
       <div className="absolute inset-0 overflow-hidden">
         <div className="relative h-full w-full">
           <div className="ease-[cubic-bezier(0.19,1,0.22,1)] absolute left-[-360px] -top-[100px] w-44 h-[1500px] rotate-[-20deg] bg-white opacity-20 transition-all duration-500 animate-moveInfiniteSm md:animate-moveInfiniteMd"></div>
@@ -112,8 +111,8 @@ const GreenComp2 = () => {
       </div>
 
       {/* mobile */}
-      <div className="lg:hidden flex flex-col items-center gap-5 md:gap-10">
-        <div className="aspect-square w-full max-w-32 transform scale-[2] translate-y-[-50%] rounded-lg overflow-hidden">
+      <div className="lg:hidden flex flex-col items-center gap-5 md:gap-10" >
+        <div className="aspect-square w-full max-w-32 transform scale-[2] translate-y-[-50%] overflow-hidden rounded-md">
           <img
             src="/Gif.gif"
             alt="People"
@@ -127,7 +126,7 @@ const GreenComp2 = () => {
       <div className="hidden lg:grid grid-cols-5 w-full gap-5">
         <div className="col-span-3 grid place-items-center">
           <div>
-            <div className="aspect-square w-full max-h-20 transform scale-[6] xl:scale-[7] 2xl:scale-[8.7] rounded-lg overflow-hidden">
+            <div className="aspect-square w-full max-h-20 transform scale-[6] xl:scale-[7] 2xl:scale-[8.7] rounded-sm overflow-hidden ">
               <img
                 src="/Gif.gif"
                 alt="People"
@@ -140,7 +139,7 @@ const GreenComp2 = () => {
           <GivingText />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -158,7 +157,7 @@ const GivingHeading = () => {
 
 const GivingText = () => {
   return (
-    <div className="flex flex-col gap-3 items-center lg:items-start">
+    <div className="flex flex-col gap-3 items-center lg:items-start" >
       <GivingHeading />
       <p className="text-justify poppins lg:text-lg 2xl:text-xl tracking-wide">
         The Nige Community provides a platform for traders to sharpen their

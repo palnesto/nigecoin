@@ -1,56 +1,110 @@
-import { PieChart, Pie, Cell } from "recharts";
 
-export function TokenomicsSection() {
-  const data = [
-    { name: "Ecosystem", value: 30, color: "#1A7338" },
-    { name: "Private Sale", value: 12.5, color: "#00B53E" },
-    { name: "CEX Listing", value: 20, color: "#09C1E0" },
-    { name: "Founders & Team", value: 10, color: "#09C1E0" },
-    { name: "Founders/Reserve", value: 10, color: "#5271FF" },
-    { name: "Marketing", value: 7, color: "#004AAD" },
-    { name: "Advisors", value: 3, color: "#7ED763" },
-    { name: "KOLs", value: 5, color: "#C0FF72" },
-    { name: "Public Sale", value: 2.5, color: "#0BB18E" },
-  ];
+import React from "react";
+import { PieChart, Pie, Cell, Text } from "recharts";
+
+interface DataEntry {
+  name: string;
+  value: number;
+  color: string;
+}
+
+const data: DataEntry[] = [
+  { name: "Ecosystem", value: 30, color: "#006400" },
+  { name: "Private Sale", value: 12.5, color: "#00FF00" },
+  { name: "KOLs", value: 5, color: "#ADFF2F" },
+  { name: "CEX Listing", value: 20, color: "#00FFFF" },
+  { name: "Public Sale", value: 2.5, color: "#0BB18E" },
+  { name: "Founders/Reserve", value: 10, color: "#1E90FF" },
+  { name: "Founders & Team", value: 10, color: "#0000FF" }, 
+  { name: "Marketing", value: 7, color: "#7FFF00" },
+  { name: "Advisors", value: 3, color: "#32CD32" }, 
+];
+
+interface CustomLabelProps {
+  x?: number;
+  y?: number;
+  name?: string;
+  percent?: number;
+}
+
+const CustomLabel: React.FC<CustomLabelProps> = ({ x, y, name, percent }) => {
+  const percentage = percent != null ? (percent * 100).toFixed(1) : "0"; // Use a fallback value of "0" if percent is undefined
+  
+  let adjustedX = x;
+  let adjustedY = y;
+
+  // Example adjustment for large percentages
+  if (percent && percent > 0.1) {
+    adjustedX = x! -80; // Move label to the right if percent is greater than 10%
+    adjustedY = y! - 23; // Move label upwards if percent is greater than 10%
+  }
 
   return (
-    <div
-      className="flex flex-col 2xl:flex-row lg:flex-row lg:justify-between bg-[#f7f6e1]"
-      id="tokenomics"
-    >
-      <div className=" lg:w-1/2 flex flex-col justify-between">
-        <h2 className="text-4xl font-extrabold benz-grotesk text-center pt-20 md:text-5xl xl:text-6xl  ">
-          Tokenomics of Nige
-        </h2>
-        <img
-          src="/people.png"
-          alt="People"
-          className="w-full xl:w-[40vw] mx-auto"
-        />
-      </div>
-
-      <div className="lg:w-1/2 flex justify-center">
-        <PieChart width={800} height={800}>
-          <Pie
-            data={data}
-            dataKey="value"
-            nameKey="name"
-            cx="50%"
-            cy="50%"
-            className="sm:h-[200px]"
-            fontSize={17}
-            outerRadius={240}
-            fill="#8884d8"
-            label={({ name, percent }) =>
-              `${name} ${percent ? (percent * 100).toFixed(1) + "%" : ""}`
-            }
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.color} />
-            ))}
-          </Pie>
-        </PieChart>
-      </div>
-    </div>
+    <>
+      <Text
+        x={adjustedX}
+        y={adjustedY}
+        fill="black"
+        fontSize={18}
+        textAnchor="start"
+        verticalAnchor="end"
+      >
+        {name}
+      </Text>
+      <Text
+        x={adjustedX}
+        y={adjustedY! + 20} // Adjust to add space between name and percentage
+        fill="black"
+        fontSize={16}
+        textAnchor="start"
+        verticalAnchor="end"
+      >
+        {percentage}%
+      </Text>
+    </>
   );
-}
+};
+
+
+export const TokenomicsSection: React.FC = () => {
+  return (
+    <section
+    className="h-full flex flex-col 2xl:flex-row lg:flex-row lg:justify-between bg-[#f7f6e1]"
+    id="tokenomics"
+  >
+    <div className=" lg:w-1/2 flex flex-col justify-between">
+      <h2 className="text-4xl font-extrabold benz-grotesk text-center pt-20 md:text-5xl xl:text-6xl  ">
+        Tokenomics of Nige
+      </h2>
+      <img
+        src="/people.png"
+        alt="People"
+        className="w-full xl:w-[40vw] mx-auto"
+      />
+    </div>
+
+    <div className="lg:w-1/2 flex justify-center bg-[#f7f6e1]">
+      <PieChart width={700} height={800}>
+        <Pie
+          data={data}
+          dataKey="value"
+          nameKey="name"
+          cx="50%"
+          cy="50%"
+          outerRadius={260}
+          label={CustomLabel} 
+          labelLine={false}  
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={entry.color} />
+          ))}
+        </Pie>
+      </PieChart>
+    </div>
+  </section>
+  );
+};
+
+
+
+

@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 const config = [
   { name: "Home", href: "#home" },
   { name: "About us", href: "#aboutus" },
-  { name: "White paper", href: "#whitepaper" },
   { name: "Roadmap", href: "#roadmap" },
   { name: "Tokenomics", href: "#tokenomics" },
+  { name: "Team", href: "#team" },
   { name: "Contact us", href: "#contactus" },
+  { name: "White paper", href: "https://docs.google.com/document/d/1q5qq5AQ9jAxNX8VMg6mcxZd4TfG0QpUM_aVxv4Fh1EQ/edit?tab=t.0#heading=h.o7c9p5dsb2az" },
+  
 ];
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +20,12 @@ export const Navbar = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            console.log(entry.target.id)
             setActiveSection(entry.target.id);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold:  0.5}
     );
 
     sections.forEach((section) => observer.observe(section));

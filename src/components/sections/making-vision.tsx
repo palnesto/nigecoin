@@ -5,9 +5,9 @@ export const MakingVision = () => {
   const { setId } = usePopUpStore();
 
   return (
-    <div
+    <section
       id="roadmap"
-      className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20"
+      className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20 h-full"
     >
       <div className="w-[300vw] sm:w-[200vw] md:w-full">
         <img src="/graph.png" alt="" className="w-full" />
@@ -23,7 +23,7 @@ export const MakingVision = () => {
             <div className="relative h-full w-full sm:group-hover:cursor-pointer">
               <Gradient />
               {/* title + button */}
-              <div className="absolute w-[80%] bottom-[26vw] sm:bottom-[18vw] ml-[9%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+              <div className="absolute w-[80%] bottom-[26vw] sm:bottom-[18vw] ml-[9%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white">
                 <h2 className="font-bold text-[4vw] sm:text-[3vw]">
                   Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
                 </h2>
@@ -51,9 +51,9 @@ export const MakingVision = () => {
           {/* bar 2 */}
           <div className="absolute bottom-0 ml-[92vw] w-[67vw] h-[100vw] sm:h-[60vw] sm:ml-[61vw] sm:w-[45vw] group">
             <div className="relative h-full w-full sm:group-hover:cursor-pointer">
-              <Gradient />
+              {/* <Gradient /> */}
               {/* title + button */}
-              <div className="absolute w-[80%] bottom-[45vw] sm:bottom-[29vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+              <div className="absolute w-[80%] bottom-[45vw] sm:bottom-[29vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw]  text-white/70 ">
                 <h2 className="font-bold text-[4vw] sm:text-[3vw]">
                   Phase - 2 <br /> Growth & Expansion <br /> (Q4 2024 - Q1 2025)
                 </h2>
@@ -66,7 +66,7 @@ export const MakingVision = () => {
                 </div>
               </div>
               {/* eagle image */}
-              <div className="w-[40%] absolute bottom-[38vw] sm:bottom-[25vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-[40%] absolute bottom-[38vw] sm:bottom-[25vw] right-[-5%] opacity-0 transition-opacity duration-300">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -78,9 +78,9 @@ export const MakingVision = () => {
           {/* bar 3 */}
           <div className="absolute bottom-0 ml-[163vw] w-[67vw] h-[120vw] sm:h-[80vw] sm:ml-[108vw] sm:w-[45vw] group">
             <div className="relative h-full w-full sm:group-hover:cursor-pointer">
-              <Gradient />
+              {/* <Gradient /> */}
               {/* title + button */}
-              <div className="absolute w-[80%] bottom-[63vw] sm:bottom-[40vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+              <div className="absolute w-[80%] bottom-[63vw] sm:bottom-[40vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] sm:text-white/70 ">
                 <h2 className="font-bold text-[4vw] sm:text-[3vw]">
                   Phase - 3 <br /> Platform Launch & <br /> Ecosystem
                   Integration <br /> (Q2 2025 - Q4 2025)
@@ -94,7 +94,7 @@ export const MakingVision = () => {
                 </div>
               </div>
               {/* eagle image */}
-              <div className="w-[40%] absolute bottom-[55vw] sm:bottom-[38vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-[40%] absolute bottom-[55vw] sm:bottom-[38vw] right-[-5%] opacity-0  transition-opacity duration-300">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -106,9 +106,9 @@ export const MakingVision = () => {
           {/* bar 4 */}
           <div className="absolute bottom-0 ml-[231vw] w-[68vw] h-[140vw] sm:h-[100vw] sm:ml-[154vw] sm:w-[46vw] group">
             <div className="relative h-full w-full sm:group-hover:cursor-pointer">
-              <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-300 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%] top-[-10%]" />
+              {/* <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-300 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%] top-[-10%]" /> */}
               {/* title + button */}
-              <div className="absolute w-[80%] bottom-[93vw] sm:bottom-[62vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white sm:text-white/70 sm:group-hover:text-white">
+              <div className="absolute w-[80%] bottom-[93vw] sm:bottom-[62vw] ml-[5%] flex flex-col gap-[2vw] sm:gap-[3vw] text-white/70 ">
                 <h2 className="font-bold text-[4vw] sm:text-[3vw]">
                   Phase - 4 <br /> Long-Term Vision & <br /> Sustainability{" "}
                   <br /> (2026 & Beyond)
@@ -122,7 +122,7 @@ export const MakingVision = () => {
                 </div>
               </div>
               {/* eagle image */}
-              <div className="w-[40%] absolute bottom-[90vw] sm:bottom-[60vw] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-[40%] absolute bottom-[90vw] sm:bottom-[60vw] right-[-5%] opacity-0   transition-opacity duration-300">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -141,7 +141,9 @@ export const MakingVision = () => {
           <div className="w-[24vw] max-container:w-[475.2px] ml-[5.4vw] max-container:ml-[106.92px] h-[26vw] max-container:h-[514.8px] absolute bottom-0 group">
             <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
               <Gradient />
-              <div className="absolute w-[60%] bg-transparent bottom-[35%] ml-[5%] flex flex-col gap-[1vw]  text-white/70 group-hover:text-white">
+              {/* title + button on hover */}
+              {/* <div className="absolute w-[60%] bg-transparent bottom-[35%] ml-[5%] flex flex-col gap-[1vw]  text-white/70 group-hover:text-white"> */}
+              <div className="absolute w-[60%] bg-transparent bottom-[35%] ml-[5%] flex flex-col gap-[1vw] text-white">
                 <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                   Phase - 1 <br /> Foundation & <br /> Launch (Q3 2024)
                 </h2>
@@ -153,7 +155,9 @@ export const MakingVision = () => {
                   <BiChevronDown />
                 </div>
               </div>
-              <div className="w-[40%] absolute bottom-[32%] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* eagle image on hover */} 
+              {/* <div className="w-[40%] absolute bottom-[32%] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300"> */}
+              <div className="w-[40%] absolute bottom-[32%] right-[-5%] ">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -165,8 +169,8 @@ export const MakingVision = () => {
           {/* bar 2 */}
           <div className="w-[22vw] max-container:w-[435.6px] ml-[30.5vw] max-container:ml-[603.9px] h-[30vw] max-container:h-[594px] absolute bottom-0 group">
             <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
-              <Gradient />
-              <div className="absolute w-[60%] bg-transparent bottom-[47%] ml-[5%] flex flex-col gap-[1vw] text-white/70 group-hover:text-white">
+              {/* <Gradient /> */}
+              <div className="absolute w-[60%] bg-transparent bottom-[47%] ml-[5%] flex flex-col gap-[1vw] text-white/70 ">
                 <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                   Phase - 2 <br /> Growth & Expansion <br /> (Q4 2024 - Q1 2025)
                 </h2>
@@ -178,7 +182,7 @@ export const MakingVision = () => {
                   <BiChevronDown />
                 </div>
               </div>
-              <div className="w-[40%] absolute bottom-[45%] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-[40%] absolute bottom-[45%] right-[-5%] opacity-0 transition-opacity duration-300">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -190,8 +194,8 @@ export const MakingVision = () => {
           {/* bar 3 */}
           <div className="w-[22vw] max-container:w-[435.6px] ml-[54vw] max-container:ml-[1069.2px] h-[35vw] max-container:h-[693px] absolute bottom-0 group">
             <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
-              <Gradient />
-              <div className="absolute w-[60%] bg-transparent bottom-[58%] ml-[5%] flex flex-col gap-[1vw] text-white/70 group-hover:text-white">
+              {/* <Gradient /> */}
+              <div className="absolute w-[60%] bg-transparent bottom-[58%] ml-[5%] flex flex-col gap-[1vw] text-white/70">
                 <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                   Phase - 3 <br /> Platform Launch <br />& Ecosystem Integration{" "}
                   <br /> (Q2 2025 -Q4 2025)
@@ -204,7 +208,7 @@ export const MakingVision = () => {
                   <BiChevronDown />
                 </div>
               </div>
-              <div className="w-[40%] absolute bottom-[57%] right-[-5%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-[40%] absolute bottom-[57%] right-[-5%] opacity-0 transition-opacity duration-300">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -216,8 +220,8 @@ export const MakingVision = () => {
           {/* bar 4 */}
           <div className=" w-[23vw] max-container:w-[455.4px] ml-[77vw] max-container:ml-[1524.6px] h-[40vw] max-container:h-[792px] absolute bottom-0 group">
             <div className="h-full w-full bg-transparent relative group-hover:cursor-pointer">
-              <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-300 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%] top-[-25%]" />
-              <div className="absolute w-[60%] bg-transparent bottom-[78%] ml-[5%] flex flex-col gap-[1vw] text-white/70 group-hover:text-white">
+              {/* <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-300 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%] top-[-25%]" /> */}
+              <div className="absolute w-[60%] bg-transparent bottom-[78%] ml-[5%] flex flex-col gap-[1vw] text-white/70">
                 <h2 className="font-bold text-[1.3vw] max-container:text-[25.74px]">
                   Phase - 4 <br /> Long-Term Vision & <br /> Sustainability{" "}
                   <br />
@@ -231,7 +235,7 @@ export const MakingVision = () => {
                   <BiChevronDown />
                 </div>
               </div>
-              <div className="w-[40%] absolute bottom-[76%] right-[0%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-[40%] absolute bottom-[76%] right-[0%] opacity-0 transition-opacity duration-300">
                 <img
                   src="/character.png"
                   alt="eagle"
@@ -242,10 +246,10 @@ export const MakingVision = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 const Gradient = () => (
-  <div className="opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 ease-in group-hover:transition-opacity group-hover:duration-300 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%]" />
+  <div className=" ease-in group-hover:transition-opacity group-hover:duration-300 origin-center radial-gradient-purple aspect-square h-20 rounded-full absolute left-[-10%]" />
 );

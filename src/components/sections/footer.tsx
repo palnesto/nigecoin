@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {
-  FaInstagramSquare,
+  // FaInstagramSquare,
   FaTwitter,
-  FaYoutube,
+  // FaYoutube,
   FaTelegram,
 } from "react-icons/fa";
 export const FooterSection = () => {
@@ -69,7 +69,7 @@ export const FooterSection = () => {
 
   return (
     <footer>
-      <section className="relative py-40 bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden">
+      <section className="relative py-40 bg-[#030E2D] text-white text-center flex flex-row justify-between overflow-hidden" id="team">
         <img
           src="/Vector.svg"
           alt=""
@@ -170,15 +170,15 @@ export const FooterSection = () => {
 
       <section
         id="contactus"
-        className=" bg-green flex flex-col-reverse gap-4 items-center md:flex-row justify-between px-4 max-h-fit"
+        className=" bg-green flex flex-col-reverse   items-center md:flex-row justify-between px-7 gap-14 h-full"
       >
         <img
           className="w-full md:w-1/2 -mt-16 xl:-mt-[6rem] 2xl:-mt-[8rem] z-10"
           src="/footerImage.png"
           alt=""
         />
-        <div className="text-white justify-items-center w-full md:justify-items-end lg:pr-2 md:align-middle xl:pr-16">
-          <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10 lg:text-4xl xl:text-6xl">
+        <div className="text-white justify-items-center w-full md:justify-items-end lg:pr-2 md:align-middle xl:pr-16 lg:py-10 xl:py-16">
+           <h2 className="text-4xl  font-extrabold  mb-1 benz-grotesk md:text-center pt-10 lg:text-4xl xl:text-6xl">
             CONTACT US
           </h2>
           <p className="inter-s lg:text-xl xl:text-2xl">
@@ -190,42 +190,50 @@ export const FooterSection = () => {
           >
             info@nigecoin.xyz
           </a>
-          <section className="pt-5 flex justify-center space-x-4 sm:space-x-4 lg:space-x-7 lg:py-7 xl:py-1">
-            <FaInstagramSquare className="text-3xl lg:text-3xl xl:text-5xl" />
-            <FaTwitter className="text-3xl lg:text-3xl xl:text-5xl" />
-            <FaYoutube className="text-3xl lg:text-3xl xl:text-5xl" />
-            <FaTelegram className="text-3xl lg:text-3xl xl:text-5xl" />
+          <section className="pt-5 flex justify-center space-x-4 sm:space-x-4 lg:space-x-7 lg:py-8 xl:py-5">
+            {/* <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+               <FaInstagramSquare className="text-3xl lg:text-3xl xl:text-5xl cursor-pointer" />
+            </a> */}
+            <a href="https://x.com/Nigecoin" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-3xl lg:text-3xl xl:text-5xl cursor-pointer" />
+            </a>
+            {/* <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+              <FaYoutube className="text-3xl lg:text-3xl xl:text-5xl cursor-pointer" />
+            </a> */}
+            <a href="https://t.me/Nigecoin" target="_blank" rel="noopener noreferrer">
+              <FaTelegram className="text-3xl lg:text-3xl xl:text-5xl cursor-pointer" />
+            </a>
           </section>
-          <section className="pt-6 font-bold">
-            <ul className="flex space-x-6 text-sm mb-4 lg:text-xl xl:text-2xl lg:pb-3">
+          <article className="pt-6 font-bold">
+            <ul className="flex space-x-3 text-xs mb-4 lg:text-lg xl:text-xl lg:pb-3 tracking-widest">
               <li>
                 <a href="#tokenomics" className="hover:text-blue-900  ">
                   TOKONOMICS
                 </a>
               </li>
               <li>
-                <a href="#roadmap" className="hover:text-blue-900  ">
+                <a  href="#roadmap" className="hover:text-blue-900  ">
                   ROADMAP
                 </a>
               </li>
               <li>
-                <a href="#whitepaper" className="hover:text-blue-900">
+                <a  href="#whitepaper" className="hover:text-blue-900">
                   REWARDS
                 </a>
               </li>
               <li>
-                <a href="#aboutus" className="hover:text-blue-900">
+                <a  href="#aboutus" className="hover:text-blue-900">
                   ABOUT
                 </a>
               </li>
             </ul>
-            <p className="text-sm text-right lg:text-xl xl:text-2xl">
+            <p className="text-xs text-right lg:text-lg xl:text-xl tracking-widest">
               &copy; 2024 BY NIGECOIN. All RIGHTS RESERVED!
             </p>
-            <p className="text-sm text-right lg:text-xl xl:text-2xl">
+            <p className="text-xs text-right lg:text-lg xl:text-xl tracking-widest">
               PRIVACY POLICY
             </p>
-          </section>
+          </article> 
         </div>
       </section>
     </footer>
