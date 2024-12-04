@@ -1,90 +1,28 @@
 import React from "react";
 import { ChartComponent } from "../chart";
 
-// interface DataEntry {
-//   name: string;
-//   value: number;
-//   color: string;
-// }
-
-// const data: DataEntry[] = [
-//   { name: "Ecosystem", value: 30, color: "#006400" },
-//   { name: "Private Sale", value: 12.5, color: "#00FF00" },
-//   { name: "KOLs", value: 5, color: "#ADFF2F" },
-//   { name: "CEX Listing", value: 20, color: "#00FFFF" },
-//   { name: "Public Sale", value: 2.5, color: "#0BB18E" },
-//   { name: "Founders/Reserve", value: 10, color: "#1E90FF" },
-//   { name: "Founders & Team", value: 10, color: "#0000FF" },
-//   { name: "Marketing", value: 7, color: "#7FFF00" },
-//   { name: "Advisors", value: 3, color: "#32CD32" },
-// ];
-
-// interface CustomLabelProps {
-//   x?: number;
-//   y?: number;
-//   name?: string;
-//   percent?: number;
-// }
-
-// const CustomLabel: React.FC<CustomLabelProps> = ({ x, y, name, percent }) => {
-//   const percentage = percent != null ? (percent * 100).toFixed(1) : "0"; // Use a fallback value of "0" if percent is undefined
-
-//   let adjustedX = x;
-//   let adjustedY = y;
-
-//   // Example adjustment for large percentages
-//   if (percent && percent > 0.1) {
-//     adjustedX = x! - 80; // Move label to the right if percent is greater than 10%
-//     adjustedY = y! - 23; // Move label upwards if percent is greater than 10%
-//   }
-
-//   return (
-//     <>
-//       <Text
-//         x={adjustedX}
-//         y={adjustedY}
-//         fill="black"
-//         fontSize={18}
-//         textAnchor="start"
-//         verticalAnchor="end"
-//       >
-//         {name}
-//       </Text>
-
-//       <Text
-//         x={adjustedX}
-//         y={adjustedY! + 20} // Adjust to add space between name and percentage
-//         fill="black"
-//         fontSize={16}
-//         textAnchor="start"
-//         verticalAnchor="end"
-//       >
-//         {`${percentage}%`}
-//       </Text>
-//     </>
-//   );
-// };
-
 export const TokenomicsSection: React.FC = () => {
   return (
     <section
-      className="h-full flex flex-col 2xl:flex-row lg:flex-row lg:justify-between bg-[#f7f6e1]"
+      className="h-full relative  bg-[#f7f6e1] xs:pt-20 sm:pt-28 md:pt-32 xl:pt-40"
       id="tokenomics"
     >
-      <div className=" lg:w-1/2 flex flex-col justify-between">
-        <h2 className="text-4xl font-extrabold benz-grotesk text-center pt-20 md:text-5xl xl:text-6xl  ">
-          Tokenomics of Nige
-        </h2>
-        <img
-          src="/people.png"
-          alt="People"
-          className="w-full xl:w-[40vw] mx-auto"
-        />
-      </div>
+      <h2 className="text-3xl xs:pl-[10vw] xs:text-2xl sm:pl-[30vw] sm:text-[6vw] lg:pl-[6vw] lg:pt-30 md:pl-[20vw] absolute benz-grotesk md:text-5xl lg:text-[4vw] xl:text-5xl">
+        Tokenomics of Nige
+      </h2>
+      <section className="flex flex-col-reverse lg:flex-row lg:items-baseline lg:justify-between">
+        <div className="flex flex-col lg:w-1/2 lg:items-center">
+          <img
+            src="/people.png"
+            alt="People"
+            className="w-full lg:pl-7 xl:w-[40vw] "
+          />
+        </div>
 
-      <div className="lg:w-1/2 flex justify-center w-full">
-        <ChartComponent />
-      </div>
+        <div className="lg:w-1/2 flex justify-center w-full">
+          <ChartComponent />
+        </div>
+      </section>
     </section>
   );
 };

@@ -9,10 +9,10 @@ export const MakingVision = () => {
       id="roadmap"
       className="bg-blue relative overflow-x-auto scrollbar-x mb-24 pt-20 h-full"
     >
-      <div className="w-[300vw] sm:w-[200vw] md:w-full">
+      <div className="w-[300vw] sm:w-[200vw] md:w-full pt-10">
         <img src="/graph.png" alt="" className="w-full" />
       </div>
-      <div className="benz-grotesk text-white text-[49px] xs:text-[55px]sm:text-[63.8px] md:text-[4vw] md:top-[4vw] max-container:text-[79.2px] max-container:left-[100px] absolute top-[15vw] sm:top-[10vw] left-[11vw] sm:left-[7vw]">
+      <div className="benz-grotesk text-white text-[49px] xs:text-[40px] sm:text-[63.8px] md:text-[4vw] md:top-[9vw] max-container:text-[79.2px] max-container:left-[100px] absolute top-[24vw] sm:top-[10vw] left-[11vw] sm:left-[7vw] ">
         Making a <br /> Vision Reality
       </div>
       {/* till start of md only */}
@@ -135,7 +135,7 @@ export const MakingVision = () => {
       </div>
 
       {/* after md */}
-      <div className="hidden absolute inset-0 bg-transparent z-10 md:flex items-end pb-[1.8vw]">
+      <div className="hidden absolute inset-0 bg-transparent z-10 md:flex items-end pb-[1.8vw] ">
         <div className="relative h-20 w-full">
           {/* bar 1 */}
           <div className="w-[24vw] max-container:w-[475.2px] ml-[5.4vw] max-container:ml-[106.92px] h-[26vw] max-container:h-[514.8px] absolute bottom-0 group">

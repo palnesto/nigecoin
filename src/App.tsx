@@ -10,6 +10,7 @@ import {
 } from "./components/sections";
 import { StoreData, usePopUpStore } from "./stores";
 import { FaXmark } from "react-icons/fa6";
+import { TeamSection } from "./components/sections/team";
 
 export const storeData: StoreData[] = [
   {
@@ -73,7 +74,8 @@ function App() {
         <div className="mt-20 xl:mt-5">
           <HeroSection />
           <AboutSection />
-          <TokenomicsSection />
+            <TokenomicsSection />
+            <TeamSection />
           <FooterSection />
         </div>
       </MaxWidthContainer>
@@ -90,8 +92,7 @@ const Popup = () => {
   const handleClickOutside = (event: MouseEvent) => {
     if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
       event.stopPropagation();
-      console.log("Clicked outside the popup!");
-      setId(-1); // Update your store when clicking outside
+      setId(-1);
     }
   };
 
@@ -102,10 +103,10 @@ const Popup = () => {
     };
   }, []);
 
-  if (!value) return null; // Return null if value is null
+  if (!value) return null;
   return (
     <div
-      ref={popupRef} // Assign the ref here
+      ref={popupRef}
       id="popup"
       className="bg-black text-white text-lg w-[90vw] z-[998] fixed top-32 xl:top-40 bottom-24 xl:bottom-8 left-[50%] translate-x-[-50%]"
     >

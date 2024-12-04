@@ -3,7 +3,7 @@ import { MakingVision } from "./making-vision";
 export function AboutSection() {
   return (
     <>
-      <section className="relative overflow-hidden pt-20" id="aboutus">
+      <section className="relative overflow-hidden pt-40 " id="aboutus">
         <img src="/Vector.svg" alt="" className="absolute object-top -top-96" />
         <img
           src="/Mask group copy.png"
@@ -11,8 +11,12 @@ export function AboutSection() {
           alt=""
         />
         <div className="bg-blue flex flex-col items-center justify-center pt-10 pb-16 px-4 lg:px-8">
-          <h1 className="z-10 benz-grotesk text-white text-base md:text-xl lg:text-2xl xl:text-4xl font-bold tracking-wider text-justify">
-            CONNECTING AFRICANS TO <br /> OPPORTUNITIES WORLDWIDE
+          <h1  className="z-10 benz-grotesk text-white text-base md:text-xl lg:text-2xl xl:text-4xl font-bold tracking-wider text-justify ">
+            <div className="flex justify-between">
+              <span>CONNECTING</span>
+              <span>AFRICANS</span>
+              <span>TO</span>
+            </div> OPPORTUNITIES WORLDWIDE
           </h1>
 
           <div className="relative flex items-center justify-center">
@@ -31,7 +35,10 @@ export function AboutSection() {
             />
           </div>
 
-          <p className="text-white lg:text-xl 2xl:text-xl tracking-wider z-10 text-justify  max-w-7xl mx-4 poppins leading-7">
+          <p 
+          style={{
+            textAlignLast: "center",
+          }} className="text-white lg:text-xl 2xl:text-xl tracking-wider z-10 flex justify-center items-center text-justify  max-w-7xl mx-4 poppins">
             Across Africa, with unemployment rates reaching 30% in some areas,
             job instability affects millions. Nige Coin offers hope through a
             blockchain platform connecting employers with skilled workers. By
@@ -159,7 +166,11 @@ const GivingText = () => {
   return (
     <div className="flex flex-col gap-3 items-center lg:items-start" >
       <GivingHeading />
-      <p className="text-justify poppins lg:text-lg 2xl:text-xl tracking-wide">
+      <p 
+        style={{
+          textAlignLast: "center",
+        }}
+        className="text-justify poppins lg:text-lg 2xl:text-xl">
         The Nige Community provides a platform for traders to sharpen their
         skills, collaborate, and achieve financial success. Members gain funded
         trading accounts, eliminating financial barriers and focusing on

@@ -12,7 +12,7 @@ const config = [
 ];
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -21,11 +21,11 @@ export const Navbar = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             console.log(entry.target.id)
-            setActiveSection(entry.target.id);
+            setActiveSection(entry.target.id === ''?'tokenomics':entry.target.id);
           }
         });
       },
-      { threshold:  0.5}
+      { threshold: 0.2}
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -36,7 +36,7 @@ export const Navbar = () => {
     console.log("isOpen", isOpen);
   }, [isOpen]);
   return (
-    <nav className="z-[999] bg-[#030E2D] text-white px-4 py-6 flex justify-between items-center w-full position-fixed z-50 left-0 xl:px-16 xl:py-7 fixed top-0">
+    <nav className="z-[999] bg-[#030E2D] text-white px-4 py-6 flex justify-between items-center w-full position-fixed  left-0 xl:px-16 xl:py-7 fixed top-0">
       <div className="flex items-center gap-2">
         <div className="aspect-square h-12 xl:h-[75px]">
           <img
@@ -102,6 +102,7 @@ export const Navbar = () => {
             >
               <a
                 href={item.href}
+                onClick={() => setIsOpen(false)}
                 className={`block py-3 xl:py-0 xl:tracking-wider ${
                   activeSection === item.href.replace("#", "")
                     ? "border-b-2 xl:border-b-4 border-green font-bold text-white"
