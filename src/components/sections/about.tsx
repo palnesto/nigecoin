@@ -3,8 +3,8 @@ import { MakingVision } from "./making-vision";
 export function AboutSection() {
   return (
     <>
-      <section className="relative overflow-hidden pt-40 " id="aboutus">
-        <img src="/Vector.svg" alt="" className="absolute object-top -top-96" />
+      <section className="relative overflow-hidden md:pt-40 " id="aboutus">
+        <img src="/Vector.svg" alt="" className="absolute hidden sm:block object-top -top-96" />
         <img
           src="/Mask group copy.png"
           className="absolute hidden md:block top-80 h-44 -left-14 md:top-72 transform scale-x-[-1]"
@@ -38,7 +38,7 @@ export function AboutSection() {
           <p 
           style={{
             textAlignLast: "center",
-          }} className="text-white lg:text-xl 2xl:text-xl tracking-wider z-10 flex justify-center items-center text-justify  max-w-7xl mx-4 poppins">
+          }} className="text-white lg:text-xl 2xl:text-xl lg:tracking-wider z-10 flex justify-center items-center text-justify  max-w-7xl mx-4 poppins">
             Across Africa, with unemployment rates reaching 30% in some areas,
             job instability affects millions. Nige Coin offers hope through a
             blockchain platform connecting employers with skilled workers. By

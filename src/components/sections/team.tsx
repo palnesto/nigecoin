@@ -72,7 +72,7 @@ export const TeamSection = () => {
     />
     <img
       src="/Mask group copy.png"
-      className="hidden lg:block md:h-40 lg:h-56 mt-60 -ml-16  transform scale-x-[-1]"
+      className="hidden lg:block md:h-40 lg:h-52 mt-60 -ml-16  transform scale-x-[-1]"
       alt="Left"
     />
 
