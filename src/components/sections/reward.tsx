@@ -20,7 +20,7 @@ export const RewardSection = () => {
    
           <div className="bg-purple-gradient xs:pt-20 sm:w-3/4 md:pt-24  md:w-[80vw] lg:w-[50vw] xl:w-[50vw]">
             <img 
-              src="/public/reward.png" 
+              src="/reward.png" 
               className="mx-auto" 
               alt="Reward" 
             />
