@@ -32,6 +32,8 @@ export const Navbar = () => {
           <li key={item.name}>
             <a
               href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : "_self"}
+              rel={item.href.startsWith("http") ? "noopener noreferrer" : ""}
               className={`block py-3 xl:py-0 xl:tracking-wider xl:text-md 2xl:text-lg ${
                 activeSection === item.href.replace("#", "")
                   ? "border-b-2 xl:border-b-4 border-[#13BE5A] font-bold text-white"
