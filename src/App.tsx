@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { lazy, Suspense, useEffect, useRef } from "react";
 import "./App.css";
 import { MaxWidthContainer } from "./components/max-width-container";
 import { Navbar } from "./components/navbar";
@@ -12,6 +12,9 @@ import { StoreData, usePopUpStore } from "./stores";
 import { FaXmark } from "react-icons/fa6";
 import { TeamSection } from "./components/sections/team";
 import { RewardSection } from "./components/sections/reward";
+const GreenComp = lazy(() => import("./components/sections/green"));
+import { MakingVision } from "./components/sections/making-vision";
+import { useNavStore } from "./stores/useNavStore";
 
 export const storeData: StoreData[] = [
   {
@@ -60,8 +63,64 @@ export const storeData: StoreData[] = [
 ];
 function App() {
   const { value } = usePopUpStore();
+  const { activeSection, setActiveSection } = useNavStore();
+
+  // Refs to sections
+  const heroRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement>(null);
+  const rewardRef = useRef<HTMLElement>(null);
+  const tokenomicsRef = useRef<HTMLElement>(null);
+  const teamRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
+  const roadmapRef = useRef<HTMLElement>(null);
+
+  const sections = [
+    { ref: heroRef, id: "home" },
+    { ref: aboutRef, id: "aboutus" },
+    { ref: roadmapRef, id: "roadmap" },
+    { ref: rewardRef, id: "reward" },
+    { ref: tokenomicsRef, id: "tokenomics" },
+    { ref: teamRef, id: "team" },
+    { ref: contactRef, id: "contactus" },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const viewportCenter = window.innerHeight / 2 + window.scrollY;
+
+      let closestSection = "";
+      let closestDistance = Infinity;
+
+      for (const section of sections) {
+        const el = section.ref.current;
+        if (!el) continue;
+
+        const rect = el.getBoundingClientRect();
+        const elCenter = rect.top + window.scrollY + rect.height / 2;
+        const distance = Math.abs(elCenter - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestSection = section.id;
+        }
+      }
+
+      if (closestSection && closestSection !== activeSection) {
+        setActiveSection(closestSection);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [sections, activeSection, setActiveSection]);
+
   return (
-    <div className="bg-blue-900 flex items-center flex-col w-full relative bg-blue">
+    <div className="relative flex flex-col items-center w-full bg-blue-900 bg-blue">
       {value && (
         <div className="fixed top-0 left-0 right-0 bottom-0 z-[996] backdrop-blur-md bg-black">
           <div className="relative w-full h-full">
@@ -70,15 +129,42 @@ function App() {
         </div>
       )}
       <Navbar />
-      {/* Main content */}
+
       <MaxWidthContainer>
         <div className="mt-20 xl:mt-5">
-          <HeroSection />
-          <AboutSection />
-          <RewardSection/>
-          <TokenomicsSection />
-          <TeamSection />
-          <FooterSection />
+          <section ref={heroRef} id="home">
+            <HeroSection />
+          </section>
+
+          <section ref={aboutRef} id="aboutus">
+            <AboutSection />
+          </section>
+
+          <section ref={roadmapRef} id="roadmap">
+            <MakingVision />
+          </section>
+
+          <section>
+            <Suspense fallback={<div>Loading...</div>}>
+              <GreenComp />
+            </Suspense>
+          </section>
+
+          <section ref={rewardRef} id="reward">
+            <RewardSection />
+          </section>
+
+          <section ref={tokenomicsRef} id="tokenomics">
+            <TokenomicsSection />
+          </section>
+
+          <section ref={teamRef} id="team">
+            <TeamSection />
+          </section>
+
+          <section ref={contactRef} id="contactus">
+            <FooterSection />
+          </section>
         </div>
       </MaxWidthContainer>
     </div>
@@ -86,6 +172,7 @@ function App() {
 }
 
 export default App;
+
 
 const Popup = () => {
   const { value, setId } = usePopUpStore();
@@ -112,7 +199,7 @@ const Popup = () => {
       id="popup"
       className="bg-black text-white text-lg w-[90vw] z-[998] fixed top-32 xl:top-40 bottom-24 xl:bottom-8 left-[50%] translate-x-[-50%]"
     >
-      <div className="h-full w-full relative">
+      <div className="relative w-full h-full">
         <div
           className="absolute right-0 top-0 hover:cursor-pointer z-[999]"
           onClick={() => setId(-1)}
@@ -123,7 +210,7 @@ const Popup = () => {
           <img
             src="/character.png"
             alt="eagle"
-            className="h-full w-full object-contain"
+            className="object-contain w-full h-full"
           />
         </div>
 
@@ -135,7 +222,7 @@ const Popup = () => {
             <ul className="flex flex-col gap-2">
               {value.listItem.map((item) => {
                 return (
-                  <li className="list-disc ml-5 md:ml-7 lg:ml-10 font-extralight tracking-wide">
+                  <li className="ml-5 tracking-wide list-disc md:ml-7 lg:ml-10 font-extralight">
                     {item}
                   </li>
                 );

@@ -1,6 +1,8 @@
 import React from "react";
 import { ChartComponent } from "../chart";
 
+//TODO: so many consistancy issues in the codebase, please fix them
+
 export const TokenomicsSection: React.FC = () => {
   return (
     <section
@@ -19,7 +21,7 @@ export const TokenomicsSection: React.FC = () => {
           />
         </div>
 
-        <div className="lg:w-1/2 flex justify-center w-full">
+        <div className="flex justify-center w-full lg:w-1/2">
           <ChartComponent />
         </div>
       </section>
