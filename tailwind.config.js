@@ -29,6 +29,9 @@ export default {
         localimg: "url('/images.jpeg')",
         "coin-gradient":
           "radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(0, 169, 255, 0.4) 40%, #001f3f 100%)",
+        "purple-gradient":
+          "radial-gradient(50% 50% at 50% 50%, #A400A9 0%, #010425 100%)",
+
       },
 
       screens: {

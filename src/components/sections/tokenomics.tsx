@@ -4,7 +4,7 @@ import { ChartComponent } from "../chart";
 export const TokenomicsSection: React.FC = () => {
   return (
     <section
-      className="h-full relative  bg-[#f7f6e1] xs:pt-20 sm:pt-28 md:pt-32 xl:pt-40"
+      className=" relative  bg-[#f7f6e1] xs:pt-20 sm:pt-28 md:pt-32 xl:pt-40 "
       id="tokenomics"
     >
       <h2 className="text-3xl xs:pl-[10vw] xs:text-2xl sm:pl-[30vw] sm:text-[6vw] lg:pl-[6vw] lg:pt-30 md:pl-[20vw] absolute benz-grotesk md:text-5xl lg:text-[4vw] xl:text-5xl">

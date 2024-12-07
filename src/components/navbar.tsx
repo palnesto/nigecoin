@@ -4,6 +4,7 @@ const config = [
   { name: "Home", href: "#home" },
   { name: "About us", href: "#aboutus" },
   { name: "Roadmap", href: "#roadmap" },
+  { name: "Reward", href: "#reward" },
   { name: "Tokenomics", href: "#tokenomics" },
   { name: "Team", href: "#team" },
   { name: "Contact us", href: "#contactus" },
@@ -21,7 +22,7 @@ export const Navbar = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             console.log(entry.target.id)
-            setActiveSection(entry.target.id === ''?'tokenomics':entry.target.id);
+            setActiveSection(entry.target.id);
           }
         });
       },

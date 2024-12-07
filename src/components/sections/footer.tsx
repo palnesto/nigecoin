@@ -11,7 +11,7 @@ export const FooterSection = () => {
 
       <section
         id="contactus"
-        className=" bg-green flex flex-col-reverse items-center md:flex-row justify-between md:pr-7 gap-14"
+        className="bg-green flex flex-col-reverse items-center md:flex-row justify-between md:pr-7 gap-14 h-[30rem]"
       >
         <img
           className="w-full md:w-1/2 -mt-16 xl:-mt-[6rem] 2xl:-mt-[8rem] z-10"

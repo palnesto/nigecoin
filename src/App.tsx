@@ -11,6 +11,7 @@ import {
 import { StoreData, usePopUpStore } from "./stores";
 import { FaXmark } from "react-icons/fa6";
 import { TeamSection } from "./components/sections/team";
+import { RewardSection } from "./components/sections/reward";
 
 export const storeData: StoreData[] = [
   {
@@ -74,8 +75,9 @@ function App() {
         <div className="mt-20 xl:mt-5">
           <HeroSection />
           <AboutSection />
-            <TokenomicsSection />
-            <TeamSection />
+          <RewardSection/>
+          <TokenomicsSection />
+          <TeamSection />
           <FooterSection />
         </div>
       </MaxWidthContainer>
