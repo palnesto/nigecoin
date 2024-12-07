@@ -140,16 +140,16 @@ function App() {
           <section ref={aboutRef} id="aboutus">
             <AboutSection />
           </section>
-
-          <section ref={roadmapRef} id="roadmap">
-            <MakingVision />
-          </section>
-
           <section>
             <Suspense fallback={<div>Loading...</div>}>
               <GreenComp />
             </Suspense>
           </section>
+
+          <section ref={roadmapRef} id="roadmap">
+            <MakingVision />
+          </section>
+
 
           <section ref={rewardRef} id="reward">
             <RewardSection />

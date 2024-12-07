@@ -47,7 +47,7 @@ export const FooterSection = () => {
             </a>
           </section>
           <article className="pt-6 font-bold">
-            <ul className="flex mb-4 text-xs tracking-widest gap-x-4 lg:gap-x-6 xl:gap-x-10 lg:text-base xl:text-xl lg:pb-3">
+            <ul className="flex gap-x-4 xs:pl-7 lg:gap-x-6 xl:gap-x-10 text-xs mb-4 lg:text-base xl:text-xl lg:pb-3 tracking-widest">
               <li>
                 <a href="#tokenomics" className="hover:text-blue-900 ">
                   TOKONOMICS
@@ -69,10 +69,10 @@ export const FooterSection = () => {
                 </a>
               </li>
             </ul>
-            <p className="text-xs tracking-widest text-right lg:text-base xl:text-xl">
+            <p className="text-xs xs:text-center text-right lg:text-base xl:text-xl tracking-widest">
               &copy; 2024 BY NIGECOIN. All RIGHTS RESERVED!
             </p>
-            <p className="text-xs tracking-widest text-right lg:text-base xl:text-xl">
+            <p className="text-xs xs:text-center text-right lg:text-base xl:text-xl tracking-widest">
               PRIVACY POLICY
             </p>
           </article> 

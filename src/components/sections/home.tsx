@@ -11,10 +11,9 @@ export function HeroSection() {
   return (
     <section id="home">
       <div className="relative aspect-[16/9] bg-hero bg-contain">
-      <ChevronsDown className="text-white w-10 sm:h-10 lg:h-16 xl:h-20 cursor-pointer absolute  md:bottom-7 md:left-5 lg:bottom-20 lg:left-25 xl:left-20" onClick={scrollToBottom}/>
+      <ChevronsDown className="text-white w-10 sm:h-10 lg:h-16 xs:bottom-1 xl:h-20 cursor-pointer absolute  md:bottom-7 md:left-5 lg:bottom-20 lg:left-25 xl:left-20" onClick={scrollToBottom}/>
         <div className="px-5 xl:px-20 flex flex-col justify-center h-full w-full" id="home">
           <div className="flex flex-col gap-y-3 lg:gap-y-9 sm:-translate-y-3 xl:-translate-y-5 2xl:-translate-y-10">
-          {/* gap-5 sm:gap-10 md:gap-10 lg:gap-14 xl:gap-20 */}
             <h1 className="text-white benz-grotesk text-[3.5vw] xl:text-[56px] leading-[5vw] xl:leading-[70px] text-shadow tracking-wider">
               UNLOCKING POSSIBILITIES, <br /> EMPOWERING CONNECTIONS
             </h1>
