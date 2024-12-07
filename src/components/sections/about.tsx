@@ -1,4 +1,3 @@
-import { MakingVision } from "./making-vision";
 
 //TODO: remove all un wanted code
 

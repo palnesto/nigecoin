@@ -129,6 +129,7 @@ function App() {
         </div>
       )}
       <Navbar />
+      
 
       <MaxWidthContainer>
         <div className="mt-20 xl:mt-5">
